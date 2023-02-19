@@ -1,0 +1,55 @@
+body {
+    background-color: rgb(226, 230, 233);
+}
+
+
+h1 {
+    padding-top: 30px;
+    text-align: center;
+    font-weight: bolder;
+}
+
+.data {
+    text-align: center;
+}
+
+  input[type="date"] {
+    height: 40px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+    margin-right: 10px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+  }
+
+  th, td {
+    border: 1px solid #d6cece;
+    padding: 8px;
+    text-align: left;
+  }
+
+  th {
+    background-color: #ddd;
+    color: rgb(0, 0, 0);
+    padding: 12px;
+  }
+
+  button {
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-right: 10px;
+  }
+
+  button:hover {
+    background-color: #3e8e41;
+  }

@@ -27,7 +27,17 @@ $(document).ready(function () {
         document.getElementById('cnpj').addEventListener('input', function (e) {
             var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,4})(\d{0,2})/);
             e.target.value = !x[2] ? x[1] : x[1] + '.' + x[2] + (x[3] ? '.' + x[3] : '') + (x[4] ? '/' + x[4] : '') + (x[5] ? '-' + x[5] : '');
+          
+            // Verifica se o valor está no formato correto de CNPJ
+            if (e.target.value.length !== 18) {
+              document.getElementById('cnpj-error').style.display = 'block';
+              document.getElementById('cnpj-success').style.display = 'none';
+            } else {
+              document.getElementById('cnpj-error').style.display = 'none';
+              document.getElementById('cnpj-success').style.display = 'block';
+            }
           });
+          
           
         
           

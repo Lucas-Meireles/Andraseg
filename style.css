@@ -3,7 +3,9 @@ img {
     height: auto;
   }
 
-
+  .elementor-428 {
+    background-color: #293040;
+  }
 
 .elementor-screen-only,.screen-reader-text,.screen-reader-text span,.ui-helper-hidden-accessible{
     position:absolute;
@@ -55,8 +57,6 @@ img {
     line-height:0;
 }
 
-
-
 .elementor-element.elementor-fixed{
     position:fixed;
 }
@@ -79,7 +79,7 @@ ul {
   }
 
 .menu-item a {
-    color: #000; /* ou qualquer outra cor desejada */
+    color: #ffffff; /* ou qualquer outra cor desejada */
     display: block;
     text-align: center;
 }
@@ -88,8 +88,6 @@ ul {
     display: block;
     width: 50%;
 }
-
-
 
 .elementor-428 .elementor-element.elementor-element-3bfbd75{
     transition:background .3s,border .3s,border-radius .3s,box-shadow .3s;
@@ -109,10 +107,8 @@ ul {
 }
 
 
-
-
 .elementor-428 .elementor-element.elementor-element-85789bf:not(.elementor-motion-effects-element-type-background),.elementor-428 .elementor-element.elementor-element-85789bf>.elementor-motion-effects-container>.elementor-motion-effects-layer{
-    background-color:#fff
+    background-color:#293040;
 }
 
 .elementor-428 .elementor-element.elementor-element-85789bf{
@@ -137,6 +133,10 @@ ul {
     font-size:13px;
     font-weight:600;
     text-transform:uppercase
+}
+
+.elementor-item:hover{
+    color: #777272;
 }
 
 .elementor-428 .elementor-element.elementor-element-116abb7 .elementor-nav-menu--main .elementor-item.elementor-item-active{
@@ -180,13 +180,13 @@ ul {
 
 .elementor-428 .elementor-element.elementor-element-875ec5c .elementor-button{
     font-size:12px;
-    background-color:#033b4a;
+    background-color:#b62222;
     border-radius:0;
     padding:10px 5px
 }
 
 .elementor-428 .elementor-element.elementor-element-875ec5c .elementor-button:hover,.elementor-428 .elementor-element.elementor-element-875ec5c .elementor-button:focus{
-    background-color:#6ec1e4
+    background-color:#5f0606;
 }
 
 .elementor-428 .elementor-element.elementor-element-875ec5c>.elementor-widget-container{
@@ -1224,7 +1224,7 @@ body.rtl .elementor-453 .elementor-element.elementor-element-92ad4d5.elementor-t
 }
 
 .elementor-453 .elementor-element.elementor-element-7b0c3ec .elementor-social-icon{
-    background-color:#fff;
+    background-color:transparent;
     --icon-padding:1em;
 }
 
@@ -1649,27 +1649,6 @@ ss3-force-full-width{
 .n2-ss-slider .n2-ss-slide-background .n2-ss-slide-background-color{
     z-index:1
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .elementor-section .elementor-container{
     display:flex;
@@ -2247,7 +2226,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item{
 .elementor-button{
     display:inline-block;
     line-height:1;
-    background-color:#818a91;
+    background-color: #3bd160;
     font-size:15px;
     padding:12px 24px;
     border-radius:3px;
@@ -2255,6 +2234,10 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item{
     fill:#fff;
     text-align:center;
     transition:all .3s;
+}
+
+.elementor-button:hover{
+    background-color: #30994a;
 }
 
 .elementor-button-icon .e-font-icon-svg{
@@ -2288,7 +2271,7 @@ ul.elementor-icon-list-items.elementor-inline-items .elementor-inline-item{
 
 .elementor-view-stacked .elementor-icon{
     padding:.5em;
-    background-color:#818a91;
+    background-color:#819186;
     color:#fff;fill:#fff;
 }
     
