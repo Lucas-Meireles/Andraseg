@@ -7,180 +7,101 @@
 
     <title>Andraseg</title>
 
-    <link rel="icon" href="image/logo-sf.png" type="image/png">
+    <link rel="icon" href="image/logo-com-fundo.jpg" type="image/png" style="width: 100%;">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
  
     <meta name='robots' content='max-image-preview:large' />    
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoLink = document.getElementById("logoLink");
+
+            logoLink.addEventListener("click", function(event) {
+                event.preventDefault(); // Impede o comportamento padrão de um link
+                reloadAndScrollToTop(); // Chama a função de recarregamento e rolagem
+            });
+
+            // Função para recarregar e rolar para o topo
+            function reloadAndScrollToTop() {
+                // Rola para o topo antes de recarregar a página
+                window.scrollTo(0, 0);
+                setTimeout(function() {
+                    location.reload(); // Recarrega a página após um curto atraso
+                }, 100); // Tempo em milissegundos
+            }
+        });
+
+        function smoothScrollToTop() {
+          const currentPosition = window.scrollY;
+          const targetPosition = 0;
+          const distance = targetPosition - currentPosition;
+          const duration = 500;
+          let startTime = null;
+        
+          function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const scrollAmount = easeInOut(elapsedTime, currentPosition, distance, duration);
+            window.scrollTo(0, scrollAmount);
+        
+            if (elapsedTime < duration) {
+              requestAnimationFrame(animation);
+            }
+          }
+        
+          function easeInOut(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+          }
+        
+          requestAnimationFrame(animation);
+        }
+        
+        window.addEventListener("scroll", function() {
+          const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollTop = window.scrollY;
+          if (scrollTop > scrollableHeight / 3) {
+            document.body.classList.add("show-button");
+          } else {
+            document.body.classList.remove("show-button");
+          }
+        });
+    </script>
+        
+
 </head>
 <body> 
-    <div data-elementor-type="header" data-elementor-id="428" class="elementor elementor-428 elementor-location-header">
-        <div class="elementor-section-wrap">
-            
-            <section class="elementor-section elementor-top-section elementor-element elementor-element-1f6646b elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f6646b" data-element_type="section" data-settings="{&quot;sticky&quot;:&quot;top&quot;,&quot;sticky_on&quot;:[&quot;desktop&quot;],&quot;sticky_offset&quot;:0,&quot;sticky_effects_offset&quot;:0}">
-                <div class="elementor-container elementor-column-gap-no">
-                    <div class="elementor-row">
-                        <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-6101ed7" data-id="6101ed7" data-element_type="column">
-                            <div class="elementor-column-wrap elementor-element-populated">
-                                <div class="elementor-widget-wrap">
-                                    <section class="elementor-section elementor-inner-section elementor-element elementor-element-85789bf elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="85789bf" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                        <div class="elementor-container elementor-column-gap-no">
-                                            <div class="elementor-row">
-                                                <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-1cc0805" data-id="1cc0805" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                    </div>
-                                                </div>
-                                                <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-b172baa" data-id="b172baa" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-116abb7 elementor-nav-menu__align-center elementor-nav-menu--dropdown-tablet elementor-nav-menu__text-align-aside elementor-nav-menu--toggle elementor-nav-menu--burger elementor-widget elementor-widget-nav-menu" data-id="116abb7" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;horizontal&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;fas fa-caret-down\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;fa-solid&quot;},&quot;toggle&quot;:&quot;burger&quot;}" data-widget_type="nav-menu.default">
-                                                                <div class="elementor-widget-container">
-                                                                        <nav class="elementor-nav-menu--dropdown elementor-nav-menu__container" aria-hidden="true">
-                                                                            <ul id="menu-2-116abb7" class="elementor-nav-menu">
-                                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-491">
-                                                                                    <a href="#sobre" class="elementor-item elementor-item-anchor" tabindex="-1">A Empresa</a>
-                                                                                </li>
-                                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-536">
-                                                                                    <a href="#documentacao" class="elementor-item elementor-item-anchor" tabindex="-1">Documentação</a>
-                                                                                </li>
-                                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-445">
-                                                                                    <a href="#servicos" class="elementor-item elementor-item-anchor" tabindex="-1">Serviços</a>
-                                                                                </li>
-                                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-537">
-                                                                                    <a href="#depoimentos" class="elementor-item elementor-item-anchor" tabindex="-1">Depoimentos</a>
-                                                                                </li>
-                                                                                <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-538">
-                                                                                    <a href="#contatos" class="elementor-item elementor-item-anchor" tabindex="-1">Contatos</a>
-                                                                                </li>
-                                                                            </ul>
-                                                                        </nav>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!----
-                                                <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-09c8f94" data-id="09c8f94" data-element_type="column">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-cd621d6 elementor-align-justify elementor-widget elementor-widget-button" data-id="cd621d6" data-element_type="widget" data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-link">
-                                                                        <a href="login.html" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-                                                                            <span class="elementor-button-content-wrapper">
-                                                                                <span class="elementor-button-text">ÁREA DO CLIENTE</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <!----
-                                                <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-6f4860b" data-id="6f4860b" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-875ec5c elementor-align-justify elementor-widget elementor-widget-button" data-id="875ec5c" data-element_type="widget" data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="#" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-                                                                            <span class="elementor-button-content-wrapper">
-                                                                                <span class="elementor-button-text">AGENDAR</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            -->
-                                                <div class="elementor-column elementor-col-20 elementor-inner-column elementor-element elementor-element-e9123ba" data-id="e9123ba" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
-                                                    <div class="elementor-column-wrap elementor-element-populated">
-                                                        <div class="elementor-widget-wrap">
-                                                            <div class="elementor-element elementor-element-75dc4c6 elementor-align-justify elementor-widget elementor-widget-button" data-id="75dc4c6" data-element_type="widget" data-widget_type="button.default">
-                                                                <div class="elementor-widget-container">
-                                                                    <div class="elementor-button-wrapper">
-                                                                        <a href="login.html" class="elementor-button-link elementor-button elementor-size-sm" role="button">
-                                                                            <span class="elementor-button-content-wrapper">
-                                                                                <span class="elementor-button-text"> ÁREA DO CLIENTE</span>
-                                                                            </span>
-                                                                        </a>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </section>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
+
+    <nav class="navbar">
+        <a href="#" class="logo" id="logoLink">
+            <img src="image/Capturar-2.PNG" alt="Logo da Empresa">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
         </div>
-    </div>
-
-
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#sobre">A empresa</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="login.html" class="client-button">Área do Cliente</a></li>
+        </ul>
+    </nav>
+    <nav class="espaco-branco"></nav>
 
     <img src="image/background1.jpg" alt="" class="responsive-img">
 <main id="content" class="site-main post-453 page type-page status-publish has-post-thumbnail hentry" role="main">
-    <div class="page-content">
+    <div class="unica page-content">
         <div data-elementor-type="wp-page" data-elementor-id="453" class="elementor elementor-453">
             <div class="elementor-inner">
                 <div class="elementor-section-wrap">
-                    <section class="elementor-section elementor-top-section elementor-element elementor-element-9c0f826 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="9c0f826" data-element_type="section" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
-                        <div class="elementor-container elementor-column-gap-no">
-                            <div class="elementor-row">
-                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7445ec9" data-id="7445ec9" data-element_type="column">
-                                    <div class="elementor-column-wrap elementor-element-populated">
-                                        <div class="elementor-widget-wrap">
-                                            <div class="elementor-element elementor-element-0aac52b elementor-widget elementor-widget-smartslider" data-id="0aac52b" data-element_type="widget" data-widget_type="smartslider.default">
-                                                <div class="elementor-widget-container">
-                                                    <div class="n2_clear">
-                                                        <div class="background-prim">
-                                                        <ss3-force-full-width data-overflow-x="body" data-horizontal-selector="body">
-                                                            <div class="n2-section-smartslider fitvidsignore  n2_clear" data-ssid="2" tabindex="0" role="region" aria-label="Slider">
-                                                                <div id="n2-ss-2-align" class="n2-ss-align">
-                                                                    <div class="n2-padding">
-                                                                        <div id="n2-ss-2" data-creator="Smart Slider 3" data-responsive="fullwidth" class="n2-ss-slider n2-ow n2-has-hover n2notransition">
-                                                                            <div class="n2-ss-slider-wrapper-inside">
-                                                                                <div class="n2-ss-slider-controls n2-ss-slider-controls-absolute-left-center">
-                                                                                    <div style="--widget-offset:15px;" class="n2-ss-widget nextend-arrow n2-ow-all nextend-arrow-previous  nextend-arrow-animated-fade" data-hide-mobileportrait="1" id="n2-ss-2-arrow-previous" role="button" aria-label="previous arrow" tabindex="0">
-                                                                                        <img decoding="async" width="32" height="32" class="skip-lazy" data-skip-lazy="1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xMS40MzMgMTUuOTkyTDIyLjY5IDUuNzEyYy4zOTMtLjM5LjM5My0xLjAzIDAtMS40Mi0uMzkzLS4zOS0xLjAzLS4zOS0xLjQyMyAwbC0xMS45OCAxMC45NGMtLjIxLjIxLS4zLjQ5LS4yODUuNzYtLjAxNS4yOC4wNzUuNTYuMjg0Ljc3bDExLjk4IDEwLjk0Yy4zOTMuMzkgMS4wMy4zOSAxLjQyNCAwIC4zOTMtLjQuMzkzLTEuMDMgMC0xLjQybC0xMS4yNTctMTAuMjkiCiAgICAgICAgICBmaWxsPSIjZmZmZmZmIiBvcGFjaXR5PSIwLjgiIGZpbGwtcnVsZT0iZXZlbm9kZCIvPgo8L3N2Zz4=" alt="previous arrow">
-                                                                                    </div>
-                                                                                </div>
-                                                                                <div class="n2-ss-slider-controls n2-ss-slider-controls-absolute-right-center">
-                                                                                    <div style="--widget-offset:15px;" class="n2-ss-widget nextend-arrow n2-ow-all nextend-arrow-next  nextend-arrow-animated-fade" data-hide-mobileportrait="1" id="n2-ss-2-arrow-next" role="button" aria-label="next arrow" tabindex="0">
-                                                                                        <img decoding="async" loading="lazy" width="32" height="32" class="skip-lazy" data-skip-lazy="1" src="data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMzIiIGhlaWdodD0iMzIiIHZpZXdCb3g9IjAgMCAzMiAzMiIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDxwYXRoIGQ9Ik0xMC43MjIgNC4yOTNjLS4zOTQtLjM5LTEuMDMyLS4zOS0xLjQyNyAwLS4zOTMuMzktLjM5MyAxLjAzIDAgMS40MmwxMS4yODMgMTAuMjgtMTEuMjgzIDEwLjI5Yy0uMzkzLjM5LS4zOTMgMS4wMiAwIDEuNDIuMzk1LjM5IDEuMDMzLjM5IDEuNDI3IDBsMTIuMDA3LTEwLjk0Yy4yMS0uMjEuMy0uNDkuMjg0LS43Ny4wMTQtLjI3LS4wNzYtLjU1LS4yODYtLjc2TDEwLjcyIDQuMjkzeiIKICAgICAgICAgIGZpbGw9IiNmZmZmZmYiIG9wYWNpdHk9IjAuOCIgZmlsbC1ydWxlPSJldmVub2RkIi8+Cjwvc3ZnPg==" alt="next arrow">
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <ss3-loader>
-
-                                                                        </ss3-loader>
-                                                                    </div>
-                                                               </div>
-                                                                <div class="n2_clear"></div>
-                                                            </div>
-                                                        </ss3-force-full-width>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-c8bfdf6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c8bfdf6" data-element_type="section" id="sobre">
                         <div class="elementor-container elementor-column-gap-no">
                             <div class="elementor-row">
@@ -190,7 +111,7 @@
                                             <div class="elementor-element elementor-element-8315839 elementor-widget elementor-widget-image" data-id="8315839" data-element_type="widget" data-widget_type="image.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-image">
-                                                        <img src="image/single-img-three.png" alt="">
+                                                        <img class="imagem-princ" src="image/Capturar.PNG" alt="">
                                                     </div>
                                                 </div>
                                             </div>
@@ -214,7 +135,7 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-text-editor elementor-clearfix">
                                                         <p><span style="font-weight: 400;">A <strong>ANDRASEG SEGURANÇA DO TRABALHO </strong>foi criada para ser referência na Gestão de Saúde e Segurança do Trabalho, mantendo a transparência e responsabilidade com nossos clientes por meio da excelência em seus serviços e alta qualidade no atendimento. </span></p>
-                                                        <p><span style="font-weight: 400;">Por sermos uma empresa inovadora, analisamos os nosso concorrentes e a partir disso oferecemos aos nosso clientes uma segurança, agilidade e qualidade em nossos serviços.</span></p>
+                                                        <p><span style="font-weight: 400;">Por sermos uma empresa inovadora, analisamos os nossos concorrentes e a partir disso oferecemos aos nossos clientes uma segurança, agilidade e qualidade em nossos serviços.</span></p>
                                                     </div>
                                                 </div>
                                             </div>
@@ -312,7 +233,7 @@
                                                                             <div class="elementor-icon-box-wrapper">
                                                                                 <div class="elementor-icon-box-icon">
                                                                                     <span class="elementor-icon elementor-animation-">
-                                                                                        <img src="image/image-removebg-preview (1).png" alt="">
+                                                                                        <img src="image/missao.jpg" alt="">
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="elementor-icon-box-content">
@@ -339,7 +260,7 @@
                                                                             <div class="elementor-icon-box-wrapper">
                                                                                 <div class="elementor-icon-box-icon">
                                                                                     <span class="elementor-icon elementor-animation-">
-                                                                                        <img src="image/image-removebg-preview.png" alt="">
+                                                                                        <img src="image/visao.jpg" alt="">
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="elementor-icon-box-content">
@@ -366,7 +287,7 @@
                                                                             <div class="elementor-icon-box-wrapper">
                                                                                 <div class="elementor-icon-box-icon">
                                                                                     <span class="elementor-icon elementor-animation-">
-                                                                                       <img src="image/image-removebg-preview (3).png" alt="">          
+                                                                                       <img src="image/valores.jpg" alt="">          
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="elementor-icon-box-content">
@@ -495,7 +416,7 @@
                                                                                             Segurança do trabalho
                                                                                         </span>
                                                                                     </h3>
-                                                                                    <button class="btn-manual"> <strong>VISUALIZAR</strong></button>
+                                                                                    <button class="btn-manual"> <a class="a-btn-manual" href="seg-trabalho.html"> <strong>VISUALIZAR</strong></a></button>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
@@ -533,7 +454,7 @@
                                                                                             <span>Medicina do trabalho </span>
                                                                                         </h3>
                                                                                     </div>
-                                                                                    <button class="btn-manual"> <strong>VISUALIZAR</strong></button>
+                                                                                    <button class="btn-manual"> <a class="a-btn-manual" href="medic-trabalho.html"> <strong>VISUALIZAR</strong></a></button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -576,7 +497,7 @@
                                                                                         </span>
                                                                                     </h3>
                                                                                 </div>
-                                                                                <button class="btn-manual"> <strong>VISUALIZAR</strong></button>
+                                                                                <button class="btn-manual"><a class="a-btn-manual" href="treinamento.html"> <strong>VISUALIZAR</strong></a></button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -597,24 +518,15 @@
                                                                             <div class="elementor-icon-box-wrapper">
                                                                                 <div class="elementor-icon-box-icon">
                                                                                     <span class="elementor-icon elementor-animation-">
-                                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 496 496" style="enable-background:new 0 0 496 496;" xml:space="preserve">
-                                                                                            <rect x="8" y="8" style="fill:#798699;" width="384" height="368"></rect>
-                                                                                            <rect x="40" y="8" style="fill:#AFB8C9;" width="320" height="320"></rect>
-                                                                                            <rect x="376" y="408" style="fill:#92E0C0;" width="112" height="80"></rect>
-                                                                                            <path style="fill:#798699;" d="M224.512,184c25.88,0,51.312-6.752,73.776-19.592C311.712,156.736,320,142.456,320,126.992  c0-4.632-0.744-9.232-2.208-13.624L312,96l-5.312,10.616c-6.984,13.968-17.8,25.648-31.192,33.68  C262.744,147.96,248.136,152,233.256,152H216v-32h8.512c25.88,0,51.312-6.752,73.776-19.592C311.712,92.736,320,78.456,320,62.992  c0-4.632-0.744-9.232-2.208-13.624L312,32l-5.312,10.616c-6.984,13.968-17.8,25.648-31.192,33.68  C262.744,83.96,248.136,88,233.256,88H216V56l-16-16l-16,16v32h-17.256c-14.88,0-29.48-4.04-42.24-11.696  c-13.392-8.032-24.208-19.72-31.192-33.68L88,32l-5.792,17.368C80.744,53.76,80,58.36,80,62.992  c0,15.464,8.288,29.744,21.712,37.416C124.184,113.248,149.616,120,175.488,120H184v32h-17.256c-14.88,0-29.48-4.04-42.24-11.696  c-13.392-8.032-24.208-19.72-31.192-33.68L88,96l-5.792,17.368C80.744,117.76,80,122.36,80,126.992  c0,15.464,8.288,29.744,21.712,37.416C124.184,177.248,149.616,184,175.488,184H184v32h-17.256c-14.88,0-29.48-4.04-42.24-11.696  c-13.392-8.032-24.208-19.72-31.192-33.68L88,160l-5.792,17.368C80.744,181.76,80,186.36,80,190.992  c0,15.464,8.288,29.744,21.712,37.416C124.184,241.248,149.616,248,175.488,248H184v32l16,16l16-16v-32h8.512  c25.88,0,51.312-6.752,73.776-19.592C311.712,220.736,320,206.456,320,190.992c0-4.632-0.744-9.232-2.208-13.624L312,160  l-5.312,10.616c-6.984,13.968-17.8,25.648-31.192,33.68C262.744,211.96,248.136,216,233.256,216H216v-32H224.512z"></path>
-                                                                                            <path style="fill:#F9E0A6;" d="M470.968,226.32l-12.736-70.032c-1.456-8.008-5.32-15.376-11.072-21.128l-40.536-40.536  c-4.24-4.24-10-6.624-16-6.624C378.128,88,368,98.128,368,110.624c0,6,2.384,11.76,6.624,16l36.688,36.688  c3,3,4.688,7.072,4.688,11.312v69.592c0,2.48-0.576,4.936-1.688,7.152L400,280l-1.84,5.528c-1.016-0.632-1.984-1.352-2.84-2.216  l-36.688-36.688c-4.24-4.24-10-6.624-16-6.624C330.128,240,320,250.128,320,262.624c0,6,2.384,11.76,6.624,16l66.344,66.344  c4.504,4.504,7.032,10.608,7.032,16.976V408h56l11.424-28.56c3.024-7.56,4.576-15.624,4.576-23.768V237.768  C472,233.928,471.656,230.096,470.968,226.32z"></path>
-                                                                                            <polygon style="fill:#EABD8C;" points="400,392 400,408 456,408 462.4,392 "></polygon>
-                                                                                            <circle style="fill:#0FA196;" cx="404" cy="460" r="12"></circle>
-                                                                                            <path d="M467.816,400l7.032-17.584c3.416-8.552,5.152-17.552,5.152-26.744V237.776c0-4.312-0.392-8.648-1.16-12.88l-12.736-70.024  c-1.752-9.656-6.344-18.432-13.288-25.36L412.28,88.976c-3.488-3.488-7.72-5.896-12.28-7.368V0H0v384h392v16h-24v96h128v-96H467.816  z M368,16h16v64.768c-6.304,1.4-11.816,4.776-16,9.4V16z M368,131.096c0.344,0.384,0.608,0.816,0.976,1.184L384,147.312v113.376  l-16-16V131.096z M389.656,288.968c4.528,4.536,10.56,7.032,16.976,7.032H432v-16h-23.056l12.52-25.048  c1.664-3.312,2.536-7.024,2.536-10.728v-69.6c0-6.408-2.496-12.44-7.032-16.968l-36.688-36.688c-2.72-2.728-4.28-6.488-4.28-10.344  C376,102.56,382.56,96,390.632,96c3.904,0,7.584,1.52,10.344,4.28l40.536,40.536c4.624,4.624,7.688,10.472,8.856,16.904  l12.736,70.024c0.592,3.304,0.896,6.672,0.896,10.032v117.896c0,7.16-1.344,14.16-4.008,20.808L450.584,400H408v-38.064  c0-8.432-3.416-16.672-9.376-22.624l-66.344-66.344c-2.72-2.728-4.28-6.488-4.28-10.344c0-8.064,6.56-14.624,14.632-14.624  c3.904,0,7.584,1.52,10.344,4.28L389.656,288.968z M400,262.112v-98.8l5.656,5.656c1.488,1.496,2.344,3.552,2.344,5.656v69.6  c0,1.232-0.296,2.472-0.84,3.568L400,262.112z M16,368V16h16v320h280v-16H48V16h304v217.608c-3-0.968-6.128-1.608-9.368-1.608  c-7.408,0-14.112,2.752-19.416,7.136c-0.832-1.656-1.704-3.296-2.744-4.856l-5.928-8.896c8.464-9.288,13.456-21.488,13.456-34.392  c0-5.504-0.88-10.944-2.624-16.16l-6.368-19.112c5.696-8.352,8.992-18.304,8.992-28.728c0-5.504-0.88-10.944-2.624-16.16  l-6.368-19.112C324.704,83.368,328,73.416,328,62.992c0-5.504-0.88-10.944-2.624-16.16l-5.792-17.368  c-1.024-3.072-3.8-5.216-7.024-5.448c-3.168-0.248-6.272,1.504-7.72,4.4l-5.304,10.624c-6.312,12.624-16.048,23.136-28.152,30.4  C259.864,76.344,246.68,80,233.264,80H224V52.688l-24-24l-24,24V80h-9.264c-13.424,0-26.608-3.656-38.12-10.56  c-12.104-7.264-21.84-17.776-28.152-30.4l-5.312-10.616c-1.456-2.896-4.488-4.648-7.72-4.4c-3.224,0.224-6,2.376-7.024,5.448  L74.616,46.84C72.88,52.048,72,57.488,72,62.992c0,10.424,3.296,20.376,8.992,28.736l-6.368,19.112  C72.88,116.048,72,121.488,72,126.992c0,10.424,3.296,20.376,8.992,28.736l-6.368,19.112C72.88,180.048,72,185.488,72,190.992  c0,12.904,4.992,25.104,13.456,34.392l-5.928,8.896C74.608,241.672,72,250.272,72,259.16C72,283.88,92.12,304,116.84,304  c13.568,0,26.976-2.168,39.856-6.472l25.136-8.384l18.16,18.16l18.16-18.16l25.136,8.384c12.888,4.304,26.304,6.472,39.872,6.472  c15.624,0,29.392-8.04,37.424-20.2c0.144,0.152,0.248,0.328,0.392,0.48L352,315.312V320h-24v16h24h16v-4.688l19.312,19.312  c2.984,2.976,4.688,7.104,4.688,11.312V368H16z M294.32,221.464C273.104,233.584,248.96,240,224.504,240H224v-16h9.264  c16.32,0,32.344-4.44,46.352-12.84c12.664-7.592,23.184-18.12,30.768-30.68c1.072,3.4,1.616,6.936,1.616,10.512  C312,203.552,305.224,215.224,294.32,221.464z M311.992,259.16C312,275.064,299.064,288,283.16,288c-11.84,0-23.552-1.896-34.8-5.64  L224,274.24V256h0.504c27.152,0,53.952-7.104,77.528-20.528l5.12,7.688C310.32,247.92,311.992,253.448,311.992,259.16z M224,208v-16  h0.504c24.328,0,48.368-5.736,70.072-16.584c-6.024,8.904-13.888,16.44-23.192,22.024c-11.52,6.904-24.704,10.56-38.12,10.56H224z   M294.32,157.464C273.104,169.584,248.96,176,224.504,176H224v-16h9.264c16.32,0,32.344-4.44,46.352-12.84  c12.664-7.592,23.184-18.12,30.768-30.68c1.072,3.4,1.616,6.936,1.616,10.512C312,139.552,305.224,151.224,294.32,157.464z M224,144  v-16h0.504c24.328,0,48.368-5.736,70.072-16.584c-6.024,8.904-13.888,16.44-23.192,22.024c-11.52,6.904-24.704,10.56-38.12,10.56  H224z M294.32,93.464C273.104,105.584,248.96,112,224.504,112H224V96h9.264c16.32,0,32.344-4.44,46.352-12.84  c12.664-7.592,23.184-18.12,30.768-30.68c1.072,3.4,1.616,6.936,1.616,10.512C312,75.552,305.224,87.224,294.32,93.464z M208,59.312  v217.376l-8,8l-8-8V59.312l8-8L208,59.312z M175.496,240c-24.456,0-48.592-6.416-69.816-18.536  C94.776,215.224,88,203.552,88,190.992c0-3.576,0.544-7.112,1.616-10.512c7.584,12.56,18.112,23.088,30.768,30.68  c14.008,8.4,30.032,12.84,46.352,12.84H176v16H175.496z M176,256v18.24l-24.352,8.112c-11.256,3.752-22.96,5.648-34.808,5.648  C100.936,288,88,275.064,88,259.16c0-5.712,1.672-11.248,4.84-16l5.12-7.688C121.544,248.896,148.344,256,175.496,256H176z   M166.736,208c-13.424,0-26.608-3.656-38.12-10.56c-9.304-5.584-17.168-13.12-23.192-22.024C127.128,186.264,151.16,192,175.496,192  H176v16H166.736z M175.496,176c-24.456,0-48.592-6.416-69.816-18.536C94.776,151.224,88,139.552,88,126.992  c0-3.576,0.544-7.112,1.616-10.512c7.584,12.56,18.112,23.088,30.768,30.68c14.008,8.4,30.032,12.84,46.352,12.84H176v16H175.496z   M166.736,144c-13.424,0-26.608-3.656-38.12-10.56c-9.304-5.584-17.168-13.12-23.192-22.024C127.128,122.264,151.16,128,175.496,128  H176v16H166.736z M175.496,112c-24.456,0-48.592-6.416-69.816-18.536C94.776,87.224,88,75.552,88,62.992  c0-3.576,0.544-7.112,1.616-10.512c7.584,12.56,18.112,23.088,30.768,30.68C134.392,91.56,150.416,96,166.736,96H176v16H175.496z   M480,480h-96v-64h96V480z"></path>
-                                                                                        </svg> 
+                                                                                       <img src="image/moblizacao.png" alt="" width="100%">
                                                                                     </span>
                                                                                 </div>
                                                                                 <div class="elementor-icon-box-content">
                                                                                     <h3 class="elementor-icon-box-title">
-                                                                                        <span>Credenciamento </span>
+                                                                                        <span>Mobilização </span>
                                                                                     </h3>
                                                                                 </div>
-                                                                                <button class="btn-manual"> <strong>VISUALIZAR</strong></button>
+                                                                                <button class="btn-manual"> <a class="a-btn-manual" href="credenciamento.html"> <strong>VISUALIZAR</strong></a></button>
                                                                             </div>
                                                                         </div>
                                                                     </div>
@@ -636,9 +548,9 @@
                                             <div class="elementor-element elementor-element-facf87b elementor-align-center elementor-widget elementor-widget-button" data-id="facf87b" data-element_type="widget" data-widget_type="button.default">
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-button-wrapper">
-                                                        <a href="#" target="_blank" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse" role="button">
+                                                        <a href="https://wa.me/5511945180856" target="_blank" rel="noopener noreferrer" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse" role="button">
                                                             <span class="elementor-button-content-wrapper">
-                                                                <span class="elementor-button-text">FAÇA UM AGENDAMENTO</span>
+                                                                <span class="elementor-button-text">SOLICITE UM ORÇAMENTO</span>
                                                             </span>
                                                         </a>
                                                     </div>
@@ -650,6 +562,7 @@
                             </div>
                         </div>
                     </section>
+                        <!--
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-76a8790 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="76a8790" data-element_type="section" id="documentacao" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-container elementor-column-gap-no">
                             <div class="elementor-row">
@@ -1160,6 +1073,7 @@
                             </div>
                         </div>
                     </section>
+                -->
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-b107287 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b107287" data-element_type="section" id="contatos" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
                         <div class="elementor-container elementor-column-gap-default">
                             <div class="elementor-row">
@@ -1173,7 +1087,7 @@
                                             </div>
                                             <div class="elementor-element elementor-element-39968e0 elementor-widget elementor-widget-heading" data-id="39968e0" data-element_type="widget" data-widget_type="heading.default">
                                                 <div class="elementor-widget-container">
-                                                    <h2 class="elementor-heading-title elementor-size-default">Venha fazer uma visita</h2>
+                                                    <h2 class="elementor-heading-title elementor-size-default">Venha fazer um orçamento</h2>
                                                 </div>
                                             </div>
                                             <div class="elementor-element elementor-element-4419641 elementor-widget elementor-widget-text-editor" data-id="4419641" data-element_type="widget" data-widget_type="text-editor.default">
@@ -1199,16 +1113,17 @@
                                                                                 </div>
                                                                                 <div class="elementor-icon-box-content">
                                                                                     <h3 class="elementor-icon-box-title">
-                                                                                        <span>Rua Doutor Ricardo Vilela </span>
+                                                                                        <span>EM BREVE NOVO ENDEREÇO </span>
                                                                                     </h3>
                                                                                     <p class="elementor-icon-box-description">
-                                                                                        Mogi das Cruzes
+                                                                                        Alto tietê
                                                                                     </p>
                                                                                 </div>
                                                                             </div>
                                                                         </div>
                                                                     </div>
                                                                     <div class="elementor-element elementor-element-5268f16 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="5268f16" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <!---
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-icon-box-wrapper">
                                                                                 <div class="elementor-icon-box-icon">
@@ -1248,6 +1163,7 @@
                                                                             </div>
                                                                         </div>
                                                                     </div>
+                                                                -->
                                                                     <div class="elementor-element elementor-element-32ce1e5 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="32ce1e5" data-element_type="widget" data-widget_type="icon-box.default">
                                                                         <div class="elementor-widget-container">
                                                                             <div class="elementor-icon-box-wrapper">
@@ -1259,7 +1175,7 @@
                                                                                 <div class="elementor-icon-box-content">
                                                                                     <h3 class="elementor-icon-box-title">
                                                                                         <span>
-                                                                                            Seg. - Sex. 7:40 - 17:35. 
+                                                                                            Seg. - Sex. 9:00 - 18:00. 
                                                                                         </span>
                                                                                     </h3>
                                                                                     <p class="elementor-icon-box-description">
@@ -1279,7 +1195,8 @@
                                                 <div class="elementor-widget-container">
                                                     <div class="elementor-social-icons-wrapper elementor-grid">
                                                         <span class="elementor-grid-item">
-                                                            <a href="https://www.facebook.com/people/Lucas-Santana/100048976853624/" class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-97974f8" target="_blank">
+                                                            <!----
+                                                            <a href="" class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-97974f8" target="_blank">
                                                                 <span class="elementor-screen-only">Facebook</span>
                                                                     <i class="fab fa-facebook"></i>
                                                             </a>
@@ -1290,10 +1207,11 @@
                                                                         <i class="fab fa-twitter"></i> 
                                                                 </a>
                                                             </span>
+                                                        --> <br><br>
                                                                 <span class="elementor-grid-item">
-                                                                    <a href="https://instagram.com/daniell_anndrade?igshid=ZDdkNTZiNTM=" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-8d4d431" target="_blank">
+                                                                    <a href="https://instagram.com/andra_segconsultoria?igshid=MmU2YjMzNjRlOQ==" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-8d4d431" target="_blank">
                                                                         <span class="elementor-screen-only">Instagram</span>
-                                                                        <i class="fab fa-instagram"></i> 
+                                                                        <img src="image/logo-instagram-2048-removebg-preview.png" alt="" width="35%">
                                                                     </a>
                                                                 </span>
                                                     </div>
@@ -1348,7 +1266,7 @@
         </div>
     </div>
     
-
+                    <!----
                     <section class="elementor-section elementor-top-section elementor-element elementor-element-64f2835 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="64f2835" data-element_type="section" id="mapa" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
                         <div class="elementor-container elementor-column-gap-no">
                             <div class="elementor-row">
@@ -1367,7 +1285,7 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> -->  
                 </div>
             </div>
         </div>
@@ -1428,7 +1346,7 @@
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-5169235 elementor-widget elementor-widget-heading" data-id="5169235" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Telefones Fixo</h2>
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Telefone</h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-22217fb elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="22217fb" data-element_type="widget" data-widget_type="icon-box.default">
@@ -1436,13 +1354,13 @@
                                         <div class="elementor-icon-box-wrapper">
                                             <div class="elementor-icon-box-icon">
                                                 <span class="elementor-icon elementor-animation-">
-                                                    <i aria-hidden="true" class="fas fa-phone-alt"></i>
+                                                    <img src="image/tell.png" alt="" width="35%">
                                                 </span>
                                             </div>
-                                            <div class="elementor-icon-box-content">
+                                            <div class="elementor-icon-box-content" style="padding-left: 10%; padding-bottom: 5%;">
                                                 <h3 class="elementor-icon-box-title">
                                                     <span>
-                                                        (11) 91111 - 1111
+                                                        (11) 94518 - 0856  <a href="https://web.whatsapp.com/send?phone=5511945180856" target="_blank"><img src="image/image-whatsapp.png" alt="" width="13%"> </a>
                                                     </span>
                                                 </h3>
                                             </div>
@@ -1457,29 +1375,50 @@
                             <div class="elementor-widget-wrap">
                                 <div class="elementor-element elementor-element-fb0e7d0 elementor-widget elementor-widget-heading" data-id="fb0e7d0" data-element_type="widget" data-widget_type="heading.default">
                                     <div class="elementor-widget-container">
-                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Whatsapp</h2>
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Instagram</h2>
                                     </div>
                                 </div>
                                 <div class="elementor-element elementor-element-1065733 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="1065733" data-element_type="widget" data-widget_type="icon-box.default">
                                     <div class="elementor-widget-container">
                                         <div class="elementor-icon-box-wrapper">
                                             <div class="elementor-icon-box-icon">
-                                                <a class="elementor-icon elementor-animation-" href="https://web.whatsapp.com/send?phone=5511111111111" target="_blank">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 52 52" style="enable-background:new 0 0 52 52;" xml:space="preserve">
-                                                        <g>
-                                                        <g>
-                                                            <path d="M26,0C11.663,0,0,11.663,0,26c0,4.891,1.359,9.639,3.937,13.762C2.91,43.36,1.055,50.166,1.035,50.237    c-0.096,0.352,0.007,0.728,0.27,0.981c0.263,0.253,0.643,0.343,0.989,0.237L12.6,48.285C16.637,50.717,21.26,52,26,52    c14.337,0,26-11.663,26-26S40.337,0,26,0z M26,50c-4.519,0-8.921-1.263-12.731-3.651c-0.161-0.101-0.346-0.152-0.531-0.152    c-0.099,0-0.198,0.015-0.294,0.044l-8.999,2.77c0.661-2.413,1.849-6.729,2.538-9.13c0.08-0.278,0.035-0.578-0.122-0.821    C3.335,35.173,2,30.657,2,26C2,12.767,12.767,2,26,2s24,10.767,24,24S39.233,50,26,50z"></path>
-                                                            <path d="M42.985,32.126c-1.846-1.025-3.418-2.053-4.565-2.803c-0.876-0.572-1.509-0.985-1.973-1.218    c-1.297-0.647-2.28-0.19-2.654,0.188c-0.047,0.047-0.089,0.098-0.125,0.152c-1.347,2.021-3.106,3.954-3.621,4.058    c-0.595-0.093-3.38-1.676-6.148-3.981c-2.826-2.355-4.604-4.61-4.865-6.146C20.847,20.51,21.5,19.336,21.5,18    c0-1.377-3.212-7.126-3.793-7.707c-0.583-0.582-1.896-0.673-3.903-0.273c-0.193,0.039-0.371,0.134-0.511,0.273    c-0.243,0.243-5.929,6.04-3.227,13.066c2.966,7.711,10.579,16.674,20.285,18.13c1.103,0.165,2.137,0.247,3.105,0.247    c5.71,0,9.08-2.873,10.029-8.572C43.556,32.747,43.355,32.331,42.985,32.126z M30.648,39.511    c-10.264-1.539-16.729-11.708-18.715-16.87c-1.97-5.12,1.663-9.685,2.575-10.717c0.742-0.126,1.523-0.179,1.849-0.128    c0.681,0.947,3.039,5.402,3.143,6.204c0,0.525-0.171,1.256-2.207,3.293C17.105,21.48,17,21.734,17,22c0,5.236,11.044,12.5,13,12.5    c1.701,0,3.919-2.859,5.182-4.722c0.073,0.003,0.196,0.028,0.371,0.116c0.36,0.181,0.984,0.588,1.773,1.104    c1.042,0.681,2.426,1.585,4.06,2.522C40.644,37.09,38.57,40.701,30.648,39.511z"></path>
-                                                        </g>
-                                                        </g>
-                                                                            
-                                                    </svg> 
+                                                <a class="elementor-icon elementor-animation-" href="https://instagram.com/andra_segconsultoria?igshid=MmU2YjMzNjRlOQ==" target="_blank">
+                                                    <img src="image/insta.png" alt="" width="25%">
                                                 </a>
                                             </div>
                                             <div class="elementor-icon-box-content">
                                                 <h3 class="elementor-icon-box-title">
-                                                    <a href="https://web.whatsapp.com/send?phone=5511111111111" target="_blank" style="color: white;">
-                                                        (11) 91111 - 1111
+                                                    <a href="https://instagram.com/andra_segconsultoria?igshid=MmU2YjMzNjRlOQ==" target="_blank" style="color: white;">
+                                                        andra_segconsultoria
+                                                    </a>                                                      
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-011cef6" data-id="011cef6" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-fb0e7d0 elementor-widget elementor-widget-heading" data-id="fb0e7d0" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Linha ética</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-1065733 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="1065733" data-element_type="widget" data-widget_type="icon-box.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-icon-box-wrapper">
+                                            <div class="elementor-icon-box-icon">
+                                                <a class="elementor-icon elementor-animation-" href="mailto:ouvidoria@andraseg.com" target="_blank">
+                                                    <img src="image/email.png" alt="" width="28%">
+                                                </a>
+                                            </div>
+                                            <div class="elementor-icon-box-content">
+                                                <h3 class="elementor-icon-box-title">
+                                                    <a href="mailto:ouvidoria@andraseg.com" target="_blank" style="color: white;">
+                                                        ouvidoria@andraseg.com
                                                     </a>                                                      
                                                 </h3>
                                             </div>
@@ -1502,8 +1441,7 @@
                                     <div class="elementor-widget-container">
                                         <center>
                                             <footer class="footer-final" style="background-color: #0c4d5f; width: 100%; padding: 0.1em;">
-                                                <p class="rodape-text">©2023 – Todos os direitos reservados. Desenvolvido por 
-                                                    <a style="color: #f9a61c;" href="https://www.facebook.com/people/Lucas-Santana/100048976853624/" target="_new" rel="noopener">XXX</a>
+                                                <p class="rodape-text">©2025 – Todos os direitos reservados
                                                 </p>
                                             </footer>                                              
                                         </center>
@@ -1520,11 +1458,26 @@
 
 
 <div id="whatsapp-button">
-    <a id="whatsapp-link" href="https://wa.me/11111111111" target="_blank" rel="noopener noreferrer">
+    <a id="whatsapp-link" href="https://wa.me/5511945180856" target="_blank" rel="noopener noreferrer">
         <i class="fab fa-whatsapp"></i>   
     </a>
 </div>
 
+<div id="back-to-top-container">
+    <button onclick="smoothScrollToTop()" id="back-to-top" title="Voltar ao topo">&#8593;</button>
+</div>
+
+<div class="cookie-banner">
+    <p>Esse site usa cookies para garantir que você tenha a melhor experiência em nosso site. 
+        <a href="#">Política de Privacidade</a>
+    </p>
+    <div class="cookie-buttons">
+        <button class="accept">Permitir Cookies</button>
+        <button class="reject">Rejeitar Cookies</button>
+    </div>
+</div>
+  
+  
 
     <script src="js/script.js"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
@@ -1534,3 +1487,7 @@
 
 
 </html>
+
+
+
+

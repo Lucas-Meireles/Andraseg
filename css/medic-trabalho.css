@@ -1,14 +1,78 @@
 .blue-bar {
-    background-color: #293040;
-    color: white;
+    background-color: #edeff3;
     text-align: center;
     padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .blue-bar a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+  }
+
+  .back-arrow {
+    margin-right: 5px;
+    }
+
+  .middle-text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ocupa o espaço restante verticalmente */
+  }
+
+  a {
+	color: #2c3e50;
+	text-decoration: none;
 }
 
-/* Estilo responsivo para telas menores */
-@media (max-width: 768px) {
-    .blue-bar {
-        font-size: 14px;
-        padding: 8px;
-    }
+.seg {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Ocupa o espaço restante verticalmente */
+    text-transform: uppercase;
+    font-weight: bold;
 }
+.container {
+    display: flex;
+    flex-direction: column; /* Altera para coluna em telas pequenas */
+    align-items: center;
+    text-align: center;
+  }
+
+  .image {
+    max-width: 100%; /* A imagem ocupa toda a largura disponível */
+    margin-right: 0; /* Não há espaçamento à direita */
+    margin-top: 20px; /* Margem superior para afastar a imagem do início da página */
+    margin-bottom: 20px; /* Margem inferior para separar a imagem do texto */
+    margin-left: 0; /* Margem esquerda resetada */
+  }
+
+  .text-container {
+    max-width: 100%; /* O contêiner de texto ocupa toda a largura disponível */
+    padding: 0 20px; /* Adiciona um espaçamento interno para o texto */
+  }
+
+  @media (min-width: 768px) {
+    /* Estilos para telas maiores, como tablets e desktops */
+    .container {
+      flex-direction: row; /* Volta para linha em telas maiores */
+      justify-content: center; /* Centraliza horizontalmente em telas maiores */
+      text-align: left;
+    }
+
+    .image {
+      max-width: 300px; /* Define o tamanho da imagem */
+      margin-right: 20px; /* Espaçamento à direita */
+    }
+
+    .text-container {
+      max-width: 60%; /* Define a largura do contêiner de texto */
+    }
+  }
+
+  

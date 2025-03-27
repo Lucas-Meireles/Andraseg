@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizar Documentos</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="css/visualizar.css">
+    <link rel="icon" href="image/logo-com-fundo.jpg" type="image/png" style="width: 100%;">
+
+
+</head>
+<body>
+    <div class="blue-bar">
+        <a href="javascript:history.back()">
+          <span class="back-arrow">&#8592;</span>
+          Voltar
+        </a>
+        <p class="seg">Login</p>
+    </div>
+    <div class="container mt-4">
+        <!-- Verificação do administrador -->
+        <script>
+            // Simulação de um usuário autenticado como administrador
+            var isAdmin = true; // Altere para false se necessário
+
+            // Função para verificar se o usuário é um administrador
+            function checkAdminStatus() {
+                if (!isAdmin) {
+                    var addButton = document.querySelector(".add-button");
+                    addButton.style.display = "none"; // Oculta o botão de adicionar para não administradores
+                }
+            }
+
+            checkAdminStatus(); // Verificar o status do administrador ao carregar a página
+        </script>
+        <!-- Campos de filtro por nome e data -->
+        <div class="row mb-3">
+            <div class="col-md-6">
+                <label for="filter-name">Filtrar por Nome:</label>
+                <input type="text" id="filter-name" class="form-control" oninput="filtrarDocumentos()">
+            </div>
+            <div class="col-md-6">
+                <label for="filter-date">Filtrar por Data:</label>
+                <input type="date" id="filter-date" class="form-control" onchange="filtrarDocumentos()">
+            </div>
+        </div>
+
+        <!-- Tabela para exibir documentos -->
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nome do Documento</th>
+                    <th>Data do Documento</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="documento-list">
+                <!-- Os documentos serão adicionados aqui dinamicamente -->
+                <tr>
+                    <td>Documento 1</td>
+                    <td>2023-09-01</td>
+                    <td>
+                        <button class="btn btn-info" onclick="visualizarDocumento(this)">Visualizar</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Documento 2</td>
+                    <td>2023-09-02</td>
+                    <td>
+                        <button class="btn btn-info" onclick="visualizarDocumento(this)">Visualizar</button>
+                    </td>
+                </tr>
+                <!-- Adicione mais documentos conforme necessário -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- JavaScript para adicionar, visualizar documentos e para filtragem -->
+    <script>
+        // Função para adicionar documento (apenas administradores podem ver o botão)
+        function adicionarDocumento() {
+            if (isAdmin) {
+                var documentoList = document.getElementById("documento-list");
+                var newRow = document.createElement("tr");
+                newRow.innerHTML = `
+                    <td>Novo Documento</td>
+                    <td>${new Date().toISOString().split('T')[0]}</td>
+                    <td>
+                        <button class="btn btn-info" onclick="visualizarDocumento(this)">Visualizar</button>
+                    </td>
+                `;
+                documentoList.appendChild(newRow);
+            } else {
+                alert("Apenas administradores podem adicionar documentos.");
+            }
+        }
+
+        // Função para visualizar documento (implemente a lógica de visualização aqui)
+        function visualizarDocumento(btn) {
+            // Implemente a lógica de visualização do documento aqui
+            var row = btn.parentElement.parentElement;
+            var nomeDocumento = row.querySelector("td:first-child").textContent;
+            var dataDocumento = row.querySelector("td:nth-child(2)").textContent;
+            alert("Visualizando documento: " + nomeDocumento + " (Data: " + dataDocumento + ")");
+        }
+
+        // Função para filtrar documentos com base no nome e na data
+        function filtrarDocumentos() {
+            var nomeFiltro = document.getElementById("filter-name").value.toLowerCase();
+            var dataFiltro = document.getElementById("filter-date").value;
+
+            var documentos = document.querySelectorAll("#documento-list tr");
+
+            for (var i = 0; i < documentos.length; i++) {
+                var nomeDocumento = documentos[i].querySelector("td:first-child").textContent.toLowerCase();
+                var dataDocumento = documentos[i].querySelector("td:nth-child(2)").textContent;
+
+                if (nomeDocumento.includes(nomeFiltro) && (dataFiltro === "" || dataDocumento === dataFiltro)) {
+                    documentos[i].style.display = "";
+                } else {
+                    documentos[i].style.display = "none";
+                }
+            }
+        }
+
+        // Função para voltar à página anterior
+        function voltarPaginaAnterior() {
+            window.history.back();
+        }
+    </script>
+</body>
+</html>

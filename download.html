@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area de upload</title>
+    <link rel="stylesheet" href="css/download.css">
+    <link rel="icon" href="image/logo-com-fundo.jpg" type="image/png" style="width: 100%;">
+
+</head>
+<body>
+    
+    <div class="blue-bar">
+        <a href="javascript:history.back()">
+          <span class="back-arrow">&#8592;</span>
+          Voltar
+        </a>
+        <p class="seg">Area de upload</p>
+        <a href="cadastro.html"><p>Cadastrar usuário</p></a>
+    </div>
+
+    <div class="component">
+        <ul class="align">
+            <li>
+                <figure class='book'>
+                    <ul class='hardcover_front'>
+                        <li>
+                            <div class="coverDesign blue">
+                                <h1>ANDRASEG</h1>
+                                <p>Segurança do trabalho</p>
+                            </div>
+                        </li>
+                        <li></li>
+                    </ul>
+                    <ul class='page'>
+                        <li></li>
+                        <li>
+                            <p class="small-text">Clique em UPLOAD para receber o arquivo.</p>
+                            <a class="btn" href="#" id="uploadBtn">UPLOAD</a>
+                            <a class="drive-link" href="URL_DO_SEU_DRIVE" id="driveLink" target="_blank">Link para o Drive</a>
+                        </li>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class='hardcover_back'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <ul class='book_spine'>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                    <figcaption>
+                        <h1>ANDRASEG</h1>
+                        <p>SEGURANÇA DO TRABALHO</p>
+                        <p>MEDICINA DO TRABALHO</p>
+                        <p>TREINAMENTOS</p>
+                        <p>MOBILIZAÇÕES</p>
+                    </figcaption>
+                </figure>
+            </li>
+        </ul>
+    </div>
+
+    <script>
+        document.getElementById("uploadBtn").addEventListener("click", function() {
+            // Ocultar o botão de upload e o pequeno texto
+            document.getElementById("uploadBtn").style.display = "none";
+            document.querySelector(".small-text").style.display = "none";
+            
+            // Exibir o link para o Drive
+            document.getElementById("driveLink").style.display = "block";
+        });
+    </script>
+    
+</body>
+</html>

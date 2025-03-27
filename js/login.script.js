@@ -1,135 +1,22 @@
-$(document).ready(function () {
+function validateLogin(event) {
+    event.preventDefault();
 
-    'use strict';
+    var username = $('#username').val();
+    var password = $('#password').val();
 
-    var usernameError = true,
-        emailError    = true,
-        passwordError = true,
-        passConfirm   = true;
-
-    // Detecta o navegador para fins de css
-    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
-        $('.form form label').addClass('fontSwitch');
+    if (username === 'admin' && password === 'admin') {
+        window.location.href = 'download.html';
+    } else if (username === 'admin2' && password === 'admin2') {
+        window.location.href = 'visualizar.html';
+    } else {
+        $('#error-message').text('Credenciais incorretas. Por favor, tente novamente.');
     }
+}
 
-    // Label effect
-    $('input').focus(function () {
-
-        $(this).siblings('label').addClass('active');
+$(document).ready(function() {
+    $('.js-tilt').tilt({
+        scale: 1.1
     });
 
-    // validação formulario
-    $('input').blur(function () {
-
-
-        //* CNPJ (mascara)
-
-        document.getElementById('cnpj').addEventListener('input', function (e) {
-            var x = e.target.value.replace(/\D/g, '').match(/(\d{0,2})(\d{0,3})(\d{0,3})(\d{0,4})(\d{0,2})/);
-            e.target.value = !x[2] ? x[1] : x[1] + '.' + x[2] + (x[3] ? '.' + x[3] : '') + (x[4] ? '/' + x[4] : '') + (x[5] ? '-' + x[5] : '');
-          
-            // Verifica se o valor está no formato correto de CNPJ
-            if (e.target.value.length !== 18) {
-              document.getElementById('cnpj-error').style.display = 'block';
-              document.getElementById('cnpj-success').style.display = 'none';
-            } else {
-              document.getElementById('cnpj-error').style.display = 'none';
-              document.getElementById('cnpj-success').style.display = 'block';
-            }
-          });
-          
-          
-        
-          
-
-        // User Name
-        if ($(this).hasClass('name')) {
-            if ($(this).val().length === 0) {
-                $(this).siblings('span.error').text('Por favor, digite seu nome e sobrenome').fadeIn().parent('.form-group').addClass('hasError');
-                usernameError = true;
-            } else if ($(this).val().length > 1 && $(this).val().length <= 6) {
-                $(this).siblings('span.error').text('Por favor, insira seu nome e sobrenome').fadeIn().parent('.form-group').addClass('hasError');
-                usernameError = true;
-            } else {
-                $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                usernameError = false;
-            }
-        }
-        // Email
-        if ($(this).hasClass('email')) {
-            if ($(this).val().length == '') {
-                $(this).siblings('span.error').text('Por favor, digite seu endereço de e-mail').fadeIn().parent('.form-group').addClass('hasError');
-                emailError = true;
-            } else {
-                $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                emailError = false;
-            }
-        }
-
-        // PassWord
-        if ($(this).hasClass('pass')) {
-            if ($(this).val().length < 8) {
-                $(this).siblings('span.error').text('Por favor, insira uma senha com 6 digitos ou mais').fadeIn().parent('.form-group').addClass('hasError');
-                passwordError = true;
-            } else {
-                $(this).siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-                passwordError = false;
-            }
-        }
-
-        // PassWord confirmation
-        if ($('.pass').val() !== $('.passConfirm').val()) {
-            $('.passConfirm').siblings('.error').text('As senhas não correspondem').fadeIn().parent('.form-group').addClass('hasError');
-            passConfirm = false;
-        } else {
-            $('.passConfirm').siblings('.error').text('').fadeOut().parent('.form-group').removeClass('hasError');
-            passConfirm = false;
-        }
-
-        // label effect
-        if ($(this).val().length > 0) {
-            $(this).siblings('label').addClass('active');
-        } else {
-            $(this).siblings('label').removeClass('active');
-        }
-    });
-
-
-    // form switch
-    $('a.switch').click(function (e) {
-        $(this).toggleClass('active');
-        e.preventDefault();
-
-        if ($('a.switch').hasClass('active')) {
-            $(this).parents('.form-peice').addClass('switched').siblings('.form-peice').removeClass('switched');
-        } else {
-            $(this).parents('.form-peice').removeClass('switched').siblings('.form-peice').addClass('switched');
-        }
-    });
-
-
-    // Form submit
-    $('form.signup-form').submit(function (event) {
-        event.preventDefault();
-
-        if (usernameError == true || emailError == true || passwordError == true || passConfirm == true) {
-            $('.name, .email, .pass, .passConfirm').blur();
-        } else {
-            $('.signup, .login').addClass('switched');
-
-            setTimeout(function () { $('.signup, .login').hide(); }, 700);
-            setTimeout(function () { $('.brand').addClass('active'); }, 300);
-            setTimeout(function () { $('.heading').addClass('active'); }, 600);
-            setTimeout(function () { $('.success-msg p').addClass('active'); }, 900);
-            setTimeout(function () { $('.success-msg a').addClass('active'); }, 1050);
-            setTimeout(function () { $('.form').hide(); }, 700);
-        }
-    });
-
-    // Reload page
-    $('a.profile').on('click', function () {
-        location.reload(true);
-    });
-
-
+    $('.login100-form').on('submit', validateLogin);
 });

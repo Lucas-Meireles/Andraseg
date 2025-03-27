@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/cadastro.css">
+<link rel="icon" href="image/logo-com-fundo.jpg" type="image/png" style="width: 100%;">
+
+<title>Cadastro</title>
+</head>
+<body>
+
+  <div class="container">
+    <a href="javascript:history.back()">
+        <span class="back-arrow">&#8592;</span>
+        Voltar
+    </a>
+    <h2>Cadastro</h2>
+    <form id="company-form">
+      <label for="cnpj">CNPJ:</label>
+      <input type="text" id="cnpj" maxlength="18" placeholder="00.000.000/0000-00" required>
+      
+      <label for="company-name">Nome da Empresa:</label>
+      <input type="text" id="company-name" required>
+      
+      <label for="password">Senha:</label>
+      <div class="password-field">
+        <input type="password" id="password" required>
+        <input type="checkbox" id="show-password">
+      </div>
+      
+      <button type="submit">Enviar</button>
+    </form>
+  </div>
+  
+  <script src="js/cadastro.js"></script>
+</body>
+</html>
