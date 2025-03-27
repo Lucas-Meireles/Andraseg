@@ -1,0 +1,14 @@
+.blue-bar {
+    background-color: #293040;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}
+
+/* Estilo responsivo para telas menores */
+@media (max-width: 768px) {
+    .blue-bar {
+        font-size: 14px;
+        padding: 8px;
+    }
+}
