@@ -1,0 +1,1500 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andraseg</title>
+
+    <link rel="icon" href="image/logo-com-fundo.jpg" type="image/png" style="width: 100%;">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arial&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+ 
+    <meta name='robots' content='max-image-preview:large' />    
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const logoLink = document.getElementById("logoLink");
+
+            logoLink.addEventListener("click", function(event) {
+                event.preventDefault(); // Impede o comportamento padrão de um link
+                reloadAndScrollToTop(); // Chama a função de recarregamento e rolagem
+            });
+
+            // Função para recarregar e rolar para o topo
+            function reloadAndScrollToTop() {
+                // Rola para o topo antes de recarregar a página
+                window.scrollTo(0, 0);
+                setTimeout(function() {
+                    location.reload(); // Recarrega a página após um curto atraso
+                }, 100); // Tempo em milissegundos
+            }
+        });
+
+        function smoothScrollToTop() {
+          const currentPosition = window.scrollY;
+          const targetPosition = 0;
+          const distance = targetPosition - currentPosition;
+          const duration = 500;
+          let startTime = null;
+        
+          function animation(currentTime) {
+            if (startTime === null) startTime = currentTime;
+            const elapsedTime = currentTime - startTime;
+            const scrollAmount = easeInOut(elapsedTime, currentPosition, distance, duration);
+            window.scrollTo(0, scrollAmount);
+        
+            if (elapsedTime < duration) {
+              requestAnimationFrame(animation);
+            }
+          }
+        
+          function easeInOut(t, b, c, d) {
+            t /= d / 2;
+            if (t < 1) return c / 2 * t * t + b;
+            t--;
+            return -c / 2 * (t * (t - 2) - 1) + b;
+          }
+        
+          requestAnimationFrame(animation);
+        }
+        
+        window.addEventListener("scroll", function() {
+          const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+          const scrollTop = window.scrollY;
+          if (scrollTop > scrollableHeight / 3) {
+            document.body.classList.add("show-button");
+          } else {
+            document.body.classList.remove("show-button");
+          }
+        });
+    </script>
+        
+
+</head>
+<body> 
+
+    <nav class="navbar">
+        <a href="#" class="logo" id="logoLink">
+            <img src="image/Capturar-2.PNG" alt="Logo da Empresa">
+        </a>
+        <div class="menu-toggle" id="mobile-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <ul class="nav-list" id="nav-list">
+            <li><a href="#sobre">A empresa</a></li>
+            <li><a href="#servicos">Serviços</a></li>
+            <li><a href="#contatos">Contatos</a></li>
+            <li><a href="login.html" class="client-button">Área do Cliente</a></li>
+        </ul>
+    </nav>
+    <nav class="espaco-branco"></nav>
+
+    <img src="image/background1.jpg" alt="" class="responsive-img">
+<main id="content" class="site-main post-453 page type-page status-publish has-post-thumbnail hentry" role="main">
+    <div class="unica page-content">
+        <div data-elementor-type="wp-page" data-elementor-id="453" class="elementor elementor-453">
+            <div class="elementor-inner">
+                <div class="elementor-section-wrap">
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-c8bfdf6 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="c8bfdf6" data-element_type="section" id="sobre">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-345f4da" data-id="345f4da" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-8315839 elementor-widget elementor-widget-image" data-id="8315839" data-element_type="widget" data-widget_type="image.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-image">
+                                                        <img class="imagem-princ" src="image/single-image-new.png" alt="">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-7bf55d0" data-id="7bf55d0" data-element_type="column" data-settings="{&quot;animation&quot;:&quot;none&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-70ee2f8 elementor-widget elementor-widget-heading" data-id="70ee2f8" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default"> <strong>A EMPRESA</strong> </h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-e4d2b59 elementor-widget elementor-widget-heading" data-id="e4d2b59" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Inovação e sucesso em saúde e segurança do trabalho.</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-455c21e elementor-widget elementor-widget-text-editor" data-id="455c21e" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        <p><span style="font-weight: 400;">A ANDRASEG Segurança do Trabalho foi criada para ser referência em Gestão de Saúde e Segurança do Trabalho (SST), atuando com transparência, responsabilidade e excelência, oferecendo aos nossos clientes um atendimento de alta qualidade e soluções completas para prevenção de riscos e conformidade legal. </span></p>
+                                                        <p><span style="font-weight: 400;">Somos uma empresa inovadora, com atuação estratégica e focada em resultados. Por isso, buscamos constantemente melhorias e acompanhamos as melhores práticas do mercado para garantir aos nossos clientes segurança, agilidade, eficiência e qualidade em cada serviço prestado.</span></p>
+                                                        <p><span style="font-weight: 400;">Além da assessoria completa em SST, a ANDRASEG também oferece terceirização de profissionais, disponibilizando técnicos e equipes especializadas conforme a necessidade da obra ou operação. Atuamos ainda com Resgate Industrial e Alpinismo Industrial, garantindo suporte técnico, prevenção e prontidão em atividades críticas e de alto risco.</span></p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-ccef1c4 elementor-widget elementor-widget-heading" data-id="ccef1c4" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">BENEFÍCIOS E DIFERENCIAIS EM TRABALHAR COM A ANDRASEG </h2>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-82dbfc8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="82dbfc8" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-no">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-37f6094" data-id="37f6094" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-7dee01d elementor-icon-list--layout-traditional elementor-list-item-link-full_width elementor-widget elementor-widget-icon-list" data-id="7dee01d" data-element_type="widget" data-widget_type="icon-list.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <ul class="elementor-icon-list-items">
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i>
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Empresa inovadora, com foco em melhoria contínua e soluções práticas;</span>
+                                                                                </li>
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i> 
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Acompanhamento de evolução em tempo real, com transparência e organização;</span>
+                                                                                </li>
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i> 
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Equipe qualificada e atuantes, com experiência real em campo;</span>
+                                                                                </li>
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i> 
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Soluções adequadas conforme as exigências do MTE, normas regulamentadoras e necessidades específicas de cada empresa;</span>
+                                                                                </li>
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i> 
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Sistema em nuvem, com armazenamento e download de documentos na área do cliente;</span>
+                                                                                </li>
+                                                                                <li class="elementor-icon-list-item">
+                                                                                    <span class="elementor-icon-list-icon">
+                                                                                        <i aria-hidden="true" class="fas fa-arrow-alt-circle-right"></i> 
+                                                                                    </span>
+                                                                                        <span class="elementor-icon-list-text">Atendimento ágil e personalizado, com suporte técnico próximo e eficiente.</span>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="elementor-element elementor-element-89811e1 elementor-widget elementor-widget-text-editor" data-id="89811e1" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        Os serviços de medicina e segurança do trabalho são essenciais para o bom funcionamento de uma empresa, e a resguarda de qualquer eventual acontecimento.
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-b27f2f5 elementor-align-center elementor-widget elementor-widget-button" data-id="b27f2f5" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="#contatos" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-text">ENTRE EM CONTATO</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-62a10b0 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="62a10b0" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-0467643" data-id="0467643" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-a67d1d8 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="a67d1d8" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-70147f8" data-id="70147f8" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-39af099 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="39af099" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <img src="image/missao.jpg" alt="">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>
+                                                                                            MISSÃO 
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Preservar pela agilidade e compromisso <br> na entrega dos nossos serviços para os clientes.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-bfee3ba" data-id="bfee3ba" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-1bcd46f elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="1bcd46f" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <img src="image/visao.jpg" alt="">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>
+                                                                                            VISÃO 
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                        <p class="elementor-icon-box-description">
+                                                                                            Ser referência na gestão de saúde e segurança <br> do trabalho mantendo a transparência e <br> responsabilidade com nossos clientes
+                                                                                        </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-17ccf36" data-id="17ccf36" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-e6a14af elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="e6a14af" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                       <img src="image/valores.jpg" alt="">          
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>VALORES </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Bom relacionamento, respeito, transparência <br> e inovação.
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-0c9558f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="0c9558f" data-element_type="section" id="servicos">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-79d1f76" data-id="79d1f76" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-f83329b elementor-widget elementor-widget-heading" data-id="f83329b" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default"><strong> Oferecemos os seguintes serviços:</strong></h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-da2766b elementor-widget elementor-widget-heading" data-id="da2766b" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default"></h2>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-6dcd5f2 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="6dcd5f2" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-narrow">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-9a4cef8" data-id="9a4cef8" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-1ca8b3b elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="1ca8b3b" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" id="Capa_1" x="0px" y="0px" viewBox="0 0 512.001 512.001" style="enable-background:new 0 0 512.001 512.001;" xml:space="preserve">
+                                                                                            <linearGradient id="SVGID_1_" gradientUnits="userSpaceOnUse" x1="254.8091" y1="420.503" x2="254.8091" y2="-178.647" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                <stop offset="0" style="stop-color:#FFE7A5"></stop>
+                                                                                                    <stop offset="0.966" style="stop-color:#FFBF5C"></stop>
+                                                                                            </linearGradient>
+                                                                                                <path style="fill:url(#SVGID_1_);" d="M470.79,42.968c0-15.752-12.769-28.519-28.519-28.519H69.729  c-15.751,0-28.519,12.769-28.519,28.519v220.607l0,0v222.484c0,14.327,12.769,25.942,28.519,25.942l0,0h257.494h59.911h55.137  c15.751,0,28.519-11.614,28.519-25.942V375.901v-0.002V42.968H470.79z"></path>
+                                                                                                    <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="477.0702" y1="29.7345" x2="-25.0529" y2="531.8635" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                        <stop offset="0" style="stop-color:#FF5D00;stop-opacity:0"></stop>
+                                                                                                        <stop offset="1" style="stop-color:#D54003"></stop>
+                                                                                                    </linearGradient>
+                                                                                                        <path style="fill:url(#SVGID_2_);" d="M441.33,52.261c-4.63-5.975-11.87-9.826-20.015-9.826H256H90.684l0,0  c-12.54,0-25.311,11.332-25.311,25.311v195.789l0,0v197.454c0,5.786,2.351,11.068,6.224,15.112L107.497,512h219.726h59.911h55.137  c15.751,0,28.519-11.614,28.519-25.942V375.901v-0.002V81.721L441.33,52.261z"></path>
+                                                                                                            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="374.3606" y1="132.795" x2="450.8406" y2="56.315" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                <stop offset="0" style="stop-color:#97AAAA"></stop>
+                                                                                                                <stop offset="1" style="stop-color:#E8EFEE"></stop>
+                                                                                                            </linearGradient>
+                                                                                                                <path style="fill:url(#SVGID_3_);" d="M446.627,458.702V67.747c0-13.972-11.339-25.311-25.311-25.311H90.684  c-13.972,0-25.311,11.339-25.311,25.311v390.955c0,13.972,11.339,25.311,25.311,25.311h330.632  C435.287,484.013,446.627,472.673,446.627,458.702z"></path>
+                                                                                                                    <linearGradient id="SVGID_4_" gradientUnits="userSpaceOnUse" x1="254.8086" y1="327.353" x2="254.8086" y2="-241.457" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                        <stop offset="0" style="stop-color:#E2EDF2"></stop>
+                                                                                                                        <stop offset="1" style="stop-color:#E6E6E6"></stop>
+                                                                                                                    </linearGradient>
+                                                                                                                        <path style="fill:url(#SVGID_4_);" d="M319.21,484.013H90.684c-13.979,0-25.311-11.332-25.311-25.311V67.747  c0-13.979,11.332-25.311,25.311-25.311h330.632c13.979,0,25.311,11.332,25.311,25.311v295.478c0,3.873-1.524,7.591-4.243,10.35  l-98.736,100.209C337.201,480.328,328.398,484.013,319.21,484.013z"></path>
+                                                                                                                            <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="258.7358" y1="318.4212" x2="458.9258" y2="463.9012" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                                <stop offset="0" style="stop-color:#9FC7E2;stop-opacity:0"></stop>
+                                                                                                                                <stop offset="1" style="stop-color:#4975AD"></stop>
+                                                                                                                            </linearGradient>
+                                                                                                                                <path style="fill:url(#SVGID_5_);" d="M256,484.013H88.08c-12.54,0-22.707-11.332-22.707-25.311v-48.934V67.747  c0-13.979,10.166-25.311,22.707-25.311H256V484.013z"></path>
+                                                                                                                                    <linearGradient id="SVGID_6_" gradientUnits="userSpaceOnUse" x1="271.2354" y1="137.0685" x2="-35.2147" y2="337.6284" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                                        <stop offset="0" style="stop-color:#9FC7E2;stop-opacity:0"></stop>
+                                                                                                                                        <stop offset="1" style="stop-color:#4975AD"></stop>
+                                                                                                                                    </linearGradient>
+                                                                                                                                        <path style="fill:url(#SVGID_6_);" d="M446.627,263.534v197.454c0,12.716-11.332,23.024-25.311,23.024h-48.934H90.684  c-13.979,0-25.311-10.308-25.311-23.024V263.534C65.373,262.136,446.627,263.534,446.627,263.534z"></path>
+                                                                                                                                            <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="334.9359" y1="134.8063" x2="384.6201" y2="85.122" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                                                <stop offset="0" style="stop-color:#FFFFFF"></stop>
+                                                                                                                                                <stop offset="1" style="stop-color:#E8EFEE"></stop>
+                                                                                                                                            </linearGradient>
+                                                                                                                                                <path style="fill:url(#SVGID_7_);" d="M445.331,369.269c0,0-0.748,2.118-3.692,5.063c-1.093,1.093-97.409,98.863-97.409,98.863  c-6.819,6.921-16.129,10.818-25.845,10.818l0,0l0,0c8.388,0,15.186-6.8,15.186-15.186v-74.246c0-13.979,11.332-25.311,25.311-25.311  L445.331,369.269L445.331,369.269z"></path>
+                                                                                                                                                    <linearGradient id="SVGID_8_" gradientUnits="userSpaceOnUse" x1="306.2639" y1="398.3541" x2="276.3938" y2="543.834" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                                                        <stop offset="0" style="stop-color:#9FC7E2;stop-opacity:0"></stop>
+                                                                                                                                                        <stop offset="1" style="stop-color:#4975AD"></stop>
+                                                                                                                                                    </linearGradient>
+                                                                                                                                                        <path style="fill:url(#SVGID_8_);" d="M446.627,125.098l-82.663-82.663H157.152v5.834c0,11.084,4.953,21.035,12.751,27.766  l276.724,276.724L446.627,125.098L446.627,125.098z"></path>
+                                                                                                                                                        <path style="fill:#A5B0B8;" d="M318.151,84.965H193.849c-20.235,0-36.697-16.462-36.697-36.697v-27.72h197.695v27.72  C354.848,68.503,338.386,84.965,318.151,84.965z M173.812,37.206v11.061c0,11.049,8.989,20.037,20.037,20.037h124.302  c11.048,0,20.037-8.988,20.037-20.037V37.206H173.812z"></path>
+                                                                                                                                
+                                                                                                                                    <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="254.8081" y1="504.586" x2="254.8081" y2="455.896" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                                        <stop offset="0" style="stop-color:#FF7BAC"></stop>
+                                                                                                                                        <stop offset="1" style="stop-color:#E24786"></stop>
+                                                                                                                                    </linearGradient>
+                                                                                                                                <path style="fill:url(#SVGID_9_);" d="M347.459,52.201H164.541c-9.908,0-17.94-8.031-17.94-17.939V17.939  c0-9.908,8.031-17.939,17.94-17.939h182.919c9.908,0,17.939,8.031,17.939,17.939v16.322  C365.399,44.169,357.367,52.201,347.459,52.201z"></path>
+                                                                                                                        <g>
+                                                                                                                            <rect x="117.579" y="145.177" style="fill:#A5B0B8;" width="172.273" height="31.058"></rect>
+                                                                                                                            <rect x="117.579" y="263.77" style="fill:#A5B0B8;" width="172.273" height="31.058"></rect>
+                                                                                                                        </g>
+                                                                                                                    <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="155.9265" y1="151.6909" x2="236.3065" y2="71.3109" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                        <stop offset="0" style="stop-color:#FF7BAC"></stop>
+                                                                                                                        <stop offset="1" style="stop-color:#E24786"></stop>
+                                                                                                                    </linearGradient>
+                                                                                                                <path style="fill:url(#SVGID_10_);" d="M206.218,349.897c-16.521-0.805-30.205,12.171-30.555,28.431  c-0.001,0.035-0.013,0.035-0.014,0c-0.35-16.26-14.035-29.236-30.555-28.431c-18.145,0.884-30.187,18.631-27,36.516  c5.359,30.078,42.378,50.788,54.048,56.629c2.215,1.108,4.817,1.108,7.031,0c11.671-5.84,48.689-26.55,54.048-56.629  C236.404,368.528,224.362,350.78,206.218,349.897z"></path>
+                                                                                                            <linearGradient id="SVGID_11_" gradientUnits="userSpaceOnUse" x1="359.9388" y1="390.2432" x2="458.1188" y2="292.0632" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                                <stop offset="0" style="stop-color:#9EB644"></stop>
+                                                                                                                <stop offset="1" style="stop-color:#738611"></stop>
+                                                                                                            </linearGradient>
+                                                                                                        <path style="fill:url(#SVGID_11_);" d="M431.916,115.641c3.758,3.758,3.758,9.85,0,13.607l-54.503,54.497  c-10.046,10.046-26.394,10.046-36.433,0l-20.655-20.655c-3.757-3.757-3.758-9.847-0.002-13.605l0,0  c3.757-3.759,9.85-3.76,13.608-0.002l20.651,20.651c2.542,2.542,6.684,2.542,9.219,0l54.504-54.498  c3.758-3.757,9.849-3.757,13.606,0L431.916,115.641z"></path>
+                                                                                                    <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="359.9394" y1="274.2137" x2="458.1194" y2="176.0337" gradientTransform="matrix(1.0039 0 0 -1.0039 0.1922 516.5609)">
+                                                                                                        <stop offset="0" style="stop-color:#9EB644"></stop>
+                                                                                                        <stop offset="1" style="stop-color:#738611"></stop>
+                                                                                                    </linearGradient>
+                                                                                                <path style="fill:url(#SVGID_12_);" d="M431.916,232.125c3.758,3.758,3.758,9.849,0,13.607l-54.503,54.497  c-10.046,10.046-26.394,10.046-36.433,0l-20.655-20.655c-3.757-3.757-3.758-9.847-0.002-13.605l0,0  c3.757-3.759,9.85-3.76,13.608-0.002l20.651,20.651c2.542,2.542,6.684,2.542,9.219,0l54.504-54.498  c3.758-3.757,9.849-3.757,13.606,0L431.916,232.125z"></path>
+                                                                                        </svg> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>
+                                                                                            Segurança do trabalho
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                    <button class="btn-manual"> <a class="a-btn-manual" href="seg-trabalho.html"> <strong>VISUALIZAR</strong></a></button>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-313af52" data-id="313af52" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6a78a6c elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="6a78a6c" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="Filledoutline" height="512" viewBox="0 0 512 512" width="512">
+                                                                                            <path d="m464 240.1a24.006 24.006 0 0 1 -24 24h-96a24 24 0 0 1 0 48h-16a24 24 0 0 1 1.47 47.95 24 24 0 0 1 -1.47 47.95h-114.29a125.863 125.863 0 0 1 -56.29-13.29l-37.42-18.71v-167.9l32-5.33 16-2.67 32-32 62.78-41.92a21.1 21.1 0 0 1 11.8-3.63 21.481 21.481 0 0 1 16.12 35.61c-13.96 15.95-50.7 57.94-50.7 57.94h200a24 24 0 0 1 24 24z" fill="#f8caa8"></path>
+                                                                                            <path d="m152 202.77v189.23l-32-16v-167.9z" fill="#e99180"></path>
+                                                                                            <path d="m40 144h96v88h-96z" fill="#e4e4e3"></path>
+                                                                                            <path d="m40 160h96v16h-96z" fill="#cacac9"></path>
+                                                                                            <path d="m40 88v-24a32 32 0 0 1 32-32h32a32 32 0 0 1 32 32v24z" fill="#067a98"></path>
+                                                                                            <path d="m136 192v240a48 48 0 0 1 -48 48 48 48 0 0 1 -48-48v-240z" fill="#ed5749"></path>
+                                                                                            <path d="m40 216h64v176h-64z" fill="#e4e4e3"></path>
+                                                                                            <rect fill="#0093b9" height="96" rx="16" width="128" x="24" y="64"></rect>
+                                                                                            <path d="m488 384a48 48 0 0 1 -96 0c0-40 48-80 48-80s48 40 48 80z" fill="#ed5749"></path>
+                                                                                            <path d="m160 144v-64a24.037 24.037 0 0 0 -16.595-22.825 40.057 40.057 0 0 0 -39.405-33.175h-32a40.057 40.057 0 0 0 -39.4 33.175 24.037 24.037 0 0 0 -16.6 22.825v64a24.038 24.038 0 0 0 16 22.624v265.376a56 56 0 0 0 112 0v-265.376a24.038 24.038 0 0 0 16-22.624zm-88-104h32a24.038 24.038 0 0 1 22.624 16h-77.248a24.038 24.038 0 0 1 22.624-16zm-24 184h48v160h-48zm40 248a40.045 40.045 0 0 1 -40-40v-32h56a8 8 0 0 0 8-8v-176a8 8 0 0 0 -8-8h-56v-40h80v264a40.045 40.045 0 0 1 -40 40zm56-328a8.009 8.009 0 0 1 -8 8h-96a8.009 8.009 0 0 1 -8-8v-64a8.009 8.009 0 0 1 8-8h8v48h16v-48h16v48h16v-48h16v48h16v-48h8a8.009 8.009 0 0 1 8 8z"></path>
+                                                                                            <path d="m440 272.1a32 32 0 0 0 0-64h-182.369c11.993-13.706 30.176-34.484 39.089-44.664a29.41 29.41 0 0 0 -38.385-43.9l-62.777 41.915a8.018 8.018 0 0 0 -1.215 1l-30.187 30.187-5.471.912 2.63 15.782 8-1.333a7.994 7.994 0 0 0 4.342-2.235l31.443-31.452 62.121-41.477a13.361 13.361 0 0 1 20.779 11.112 13.373 13.373 0 0 1 -3.318 8.947c-13.964 15.949-50.7 57.936-50.7 57.936a7.989 7.989 0 0 0 -1.332 2.116l-8.25 19.235a52.6 52.6 0 0 1 -48.4 31.919v16a68.585 68.585 0 0 0 63.11-41.615l6.165-14.385h194.725a16 16 0 0 1 0 32h-160a31.977 31.977 0 0 0 -24.478 52.58 31.961 31.961 0 0 0 -4.711 51.371 31.917 31.917 0 0 0 -6.506 39.949h-30.591a118.627 118.627 0 0 1 -50.3-11.271l-6.828 14.471a134.728 134.728 0 0 0 57.128 12.8h114.286a31.98 31.98 0 0 0 21.189-55.951 31.935 31.935 0 0 0 5.387-41.755 31.963 31.963 0 0 0 17.124-46.194zm-96 111.9a16.019 16.019 0 0 1 -16 16h-56a15.993 15.993 0 0 1 -1.284-31.935c.427.017 58.141.017 58.568 0a16.012 16.012 0 0 1 14.716 15.935zm-73.284-31.967a15.993 15.993 0 0 1 1.284-31.933h56a15.993 15.993 0 0 1 1.284 31.935c-.427-.019-58.141-.019-58.568-.002zm89.284-63.933a16.019 16.019 0 0 1 -16 16h-64a16 16 0 0 1 0-32h64a16.018 16.018 0 0 1 16 16z"></path>
+                                                                                            <path d="m312 176.098h112v16h-112z"></path>
+                                                                                            <path d="m445.122 297.854a8 8 0 0 0 -10.244 0c-2.078 1.731-50.878 42.896-50.878 86.146a56 56 0 0 0 112 0c0-43.25-48.8-84.415-50.878-86.146zm-5.122 126.146a40.045 40.045 0 0 1 -40-40c0-28.39 28.189-58.043 40.007-69.225a192.168 192.168 0 0 1 17.746 19.225c10.147 12.684 22.247 31.657 22.247 50a40.045 40.045 0 0 1 -40 40z"></path>
+                                                                                        </svg> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                    <div class="elementor-icon-box-content">
+                                                                                        <h3 class="elementor-icon-box-title">
+                                                                                            <span>Medicina do trabalho </span>
+                                                                                        </h3>
+                                                                                    </div>
+                                                                                    <button class="btn-manual"> <a class="a-btn-manual" href="medic-trabalho.html"> <strong>VISUALIZAR</strong></a></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-f3941ed" data-id="f3941ed" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-6fd7a27 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="6fd7a27" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;,&quot;_animation_delay&quot;:1000}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <div class="elementor-icon-box-icon">
+                                                                                        <span class="elementor-icon elementor-animation-">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+                                                                                                <g>
+                                                                                                    <rect x="5" y="8" width="42" height="49" style="fill:#3780ea"></rect>
+                                                                                                    <path d="M35,6v7H17V6h6a3,3,0,0,1,6,0Z" style="fill:#e8e5fb"></path>
+                                                                                                    <rect x="8" y="12" width="36" height="42" style="fill:#5bcbfa"></rect>
+                                                                                                    <path d="M34.32,21A6.844,6.844,0,0,1,35,24H28V17A6.97,6.97,0,0,1,34.32,21Z" style="fill:#ec455a"></path>
+                                                                                                    <path d="M25,27h7a7,7,0,1,1-7-7Z" style="fill:#f3ac3c"></path>
+                                                                                                    <path d="M59,48.625v-3.25A1.376,1.376,0,0,0,57.625,44h0a1.35,1.35,0,0,1-1.285-.9,12,12,0,0,0-.567-1.368,1.353,1.353,0,0,1,.276-1.543h0a1.375,1.375,0,0,0,0-1.945l-2.3-2.3a1.375,1.375,0,0,0-1.945,0h0a1.353,1.353,0,0,1-1.543.276,12,12,0,0,0-1.368-.567,1.35,1.35,0,0,1-.9-1.285h0A1.376,1.376,0,0,0,46.625,33h-3.25A1.376,1.376,0,0,0,42,34.375h0a1.35,1.35,0,0,1-.9,1.285,12,12,0,0,0-1.368.567,1.353,1.353,0,0,1-1.543-.276h0a1.375,1.375,0,0,0-1.945,0l-2.3,2.3a1.375,1.375,0,0,0,0,1.945h0a1.353,1.353,0,0,1,.276,1.543,12,12,0,0,0-.567,1.368,1.35,1.35,0,0,1-1.285.9h0A1.376,1.376,0,0,0,31,45.375v3.25A1.376,1.376,0,0,0,32.375,50h0a1.35,1.35,0,0,1,1.285.9,12,12,0,0,0,.567,1.368,1.353,1.353,0,0,1-.276,1.543h0a1.375,1.375,0,0,0,0,1.945l2.3,2.3a1.375,1.375,0,0,0,1.945,0h0a1.353,1.353,0,0,1,1.543-.276,12,12,0,0,0,1.368.567,1.351,1.351,0,0,1,.9,1.285h0A1.376,1.376,0,0,0,43.375,61h3.25A1.376,1.376,0,0,0,48,59.625h0a1.351,1.351,0,0,1,.9-1.285,12,12,0,0,0,1.368-.567,1.353,1.353,0,0,1,1.543.276h0a1.375,1.375,0,0,0,1.945,0l2.3-2.3a1.375,1.375,0,0,0,0-1.945h0a1.353,1.353,0,0,1-.276-1.543,12,12,0,0,0,.567-1.368,1.35,1.35,0,0,1,1.285-.9h0A1.376,1.376,0,0,0,59,48.625Z" style="fill:#ec455a"></path>
+                                                                                                    <circle cx="45" cy="47" r="8" style="fill:#f6cc4f"></circle>
+                                                                                                    <circle cx="45" cy="47" r="4" style="fill:#9e2849"></circle>
+                                                                                                    <path d="M45,38a9,9,0,1,0,9,9A9.01,9.01,0,0,0,45,38Zm0,16a7,7,0,1,1,7-7A7.008,7.008,0,0,1,45,54Z"></path>
+                                                                                                    <path d="M45,42a5,5,0,1,0,5,5A5.006,5.006,0,0,0,45,42Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,45,50Z"></path>
+                                                                                                    <path d="M17.263,29H13v2h5.082A7.994,7.994,0,0,0,33,27a1,1,0,0,0-1-1H26V20a1,1,0,0,0-1-1,7.969,7.969,0,0,0-7.737,10ZM24,21.083V27a1,1,0,0,0,1,1h5.917A5.991,5.991,0,0,1,20.54,31H24V29H19.35A5.982,5.982,0,0,1,24,21.083Z"></path>
+                                                                                                    <path d="M28,25h7a1,1,0,0,0,1-1,7.953,7.953,0,0,0-.263-2H40V20H34.918A8,8,0,0,0,28,16a1,1,0,0,0-1,1v7A1,1,0,0,0,28,25Zm1-6.917A5.986,5.986,0,0,1,32.448,20H30v2h3.651a5.982,5.982,0,0,1,.266,1H29Z"></path>
+                                                                                                    <path d="M57.62,43a.341.341,0,0,1-.33-.22,12.835,12.835,0,0,0-.62-1.48.375.375,0,0,1,.08-.4,2.372,2.372,0,0,0,0-3.36l-2.29-2.3a2.39,2.39,0,0,0-3.36,0,.361.361,0,0,1-.4.09,11.821,11.821,0,0,0-1.48-.61.365.365,0,0,1-.22-.34,2.372,2.372,0,0,0-1-1.93V8a1,1,0,0,0-1-1H36V6a1,1,0,0,0-1-1H29.87a4,4,0,0,0-7.74,0H17a1,1,0,0,0-1,1V7H5A1,1,0,0,0,4,8V57a1,1,0,0,0,1,1H34.79l.75.76a2.39,2.39,0,0,0,3.36,0,.361.361,0,0,1,.4-.09,11.821,11.821,0,0,0,1.48.61.365.365,0,0,1,.22.34A2.386,2.386,0,0,0,43.38,62h3.24A2.386,2.386,0,0,0,49,59.62a.365.365,0,0,1,.22-.34,11.821,11.821,0,0,0,1.48-.61.361.361,0,0,1,.4.09,2.39,2.39,0,0,0,3.36,0l2.29-2.3a2.381,2.381,0,0,0,.01-3.36.361.361,0,0,1-.09-.4,12.835,12.835,0,0,0,.62-1.48.341.341,0,0,1,.33-.22A2.386,2.386,0,0,0,60,48.62V45.38A2.386,2.386,0,0,0,57.62,43ZM36,9H46V32H45V12a1,1,0,0,0-1-1H36ZM18,7h5a1,1,0,0,0,1-1,2,2,0,0,1,4,0,1,1,0,0,0,1,1h5v5H18ZM6,56V9H16v2H8a1,1,0,0,0-1,1V54a1,1,0,0,0,1,1H32.57a2.278,2.278,0,0,0,.33,1Zm27.3-3H9V13h7a1,1,0,0,0,1,1H35a1,1,0,0,0,1-1h7V32.04a2.369,2.369,0,0,0-2,2.34.365.365,0,0,1-.22.34,11.821,11.821,0,0,0-1.48.61.361.361,0,0,1-.4-.09,2.39,2.39,0,0,0-3.36,0l-2.29,2.3a2.155,2.155,0,0,0-.35.46H11v2H32.69a2.285,2.285,0,0,0,.55.9.361.361,0,0,1,.09.4c-.11.22-.19.47-.29.7H11v2H30.45A2.348,2.348,0,0,0,30,45.38V46H11v2H30v.62A2.386,2.386,0,0,0,32.38,51a.341.341,0,0,1,.33.22,12.835,12.835,0,0,0,.62,1.48A.358.358,0,0,1,33.3,53ZM58,48.62a.38.38,0,0,1-.38.38,2.345,2.345,0,0,0-2.23,1.57,9.142,9.142,0,0,1-.52,1.25,2.367,2.367,0,0,0,.47,2.69.368.368,0,0,1,0,.53l-2.3,2.3a.368.368,0,0,1-.53,0,2.344,2.344,0,0,0-2.68-.47,9.828,9.828,0,0,1-1.26.52A2.345,2.345,0,0,0,47,59.62a.38.38,0,0,1-.38.38H43.38a.38.38,0,0,1-.38-.38,2.345,2.345,0,0,0-1.57-2.23,9.142,9.142,0,0,1-1.25-.52,2.4,2.4,0,0,0-1.01-.23,2.362,2.362,0,0,0-1.68.7.368.368,0,0,1-.53,0l-2.3-2.3a.368.368,0,0,1,0-.53,2.367,2.367,0,0,0,.47-2.69,9.142,9.142,0,0,1-.52-1.25A2.345,2.345,0,0,0,32.38,49a.38.38,0,0,1-.38-.38V45.38a.38.38,0,0,1,.38-.38,2.345,2.345,0,0,0,2.23-1.57,9.142,9.142,0,0,1,.52-1.25,2.367,2.367,0,0,0-.47-2.69.368.368,0,0,1,0-.53l2.3-2.3a.368.368,0,0,1,.53,0,2.339,2.339,0,0,0,2.68.47,9.828,9.828,0,0,1,1.26-.52A2.345,2.345,0,0,0,43,34.38a.38.38,0,0,1,.38-.38h3.24a.38.38,0,0,1,.38.38,2.345,2.345,0,0,0,1.57,2.23,9.142,9.142,0,0,1,1.25.52,2.351,2.351,0,0,0,2.69-.47.368.368,0,0,1,.53,0l2.3,2.3a.368.368,0,0,1,0,.53,2.367,2.367,0,0,0-.47,2.69,9.142,9.142,0,0,1,.52,1.25A2.345,2.345,0,0,0,57.62,45a.38.38,0,0,1,.38.38Z"></path>
+                                                                                                </g>
+                                                                                            </svg> 
+                                                                                        </span>
+                                                                                    </div>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>
+                                                                                            Treinamentos
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                </div>
+                                                                                <button class="btn-manual"><a class="a-btn-manual" href="treinamento.html"> <strong>VISUALIZAR</strong></a></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-26af5b1 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="26af5b1" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-narrow">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2d0b786" data-id="2d0b786" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-f527dff elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="f527dff" data-element_type="widget" data-settings="{&quot;_animation&quot;:&quot;none&quot;}" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                       <img src="image/moblizacao.png" alt="" width="100%">
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>Mobilização </span>
+                                                                                    </h3>
+                                                                                </div>
+                                                                                <button class="btn-manual"> <a class="a-btn-manual" href="credenciamento.html"> <strong>VISUALIZAR</strong></a></button>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="elementor-element elementor-element-7659f74 elementor-widget elementor-widget-spacer" data-id="7659f74" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner">
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-facf87b elementor-align-center elementor-widget elementor-widget-button" data-id="facf87b" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="https://wa.me/5511945180856" target="_blank" rel="noopener noreferrer" class="elementor-button-link elementor-button elementor-size-sm elementor-animation-pulse" role="button">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-text">SOLICITE UM ORÇAMENTO</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                        <!--
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-76a8790 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="76a8790" data-element_type="section" id="documentacao" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-02bdb31" data-id="02bdb31" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-3a11dc9 elementor-widget elementor-widget-heading" data-id="3a11dc9" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default"> <strong>Oferecemos os seguintes documentos:</strong></h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-b7d53b1 elementor-widget elementor-widget-heading" data-id="b7d53b1" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">DOCUMENTAÇÕES</h2>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-3ee4d4a elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="3ee4d4a" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-narrow">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-296e347" data-id="296e347" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-98e3e01 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="98e3e01" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" id="filled_outline" height="512" viewBox="0 0 512 512" width="512" data-name="filled outline">
+                                                                                            <rect fill="#c78640" height="424" rx="16" width="368" x="72" y="64"></rect>
+                                                                                            <path d="m104 96h304v360h-304z" fill="#e0edff"></path>
+                                                                                            <path d="m210.79427 128h90.41146a18.79427 18.79427 0 0 0 18.79427-18.79427 18.79418 18.79418 0 0 0 -2.67832-9.66957l-37.08976-61.81629a28.259 28.259 0 0 0 -24.23192-13.71987 28.259 28.259 0 0 0 -24.2319 13.71987l-37.08978 61.81627a18.79418 18.79418 0 0 0 -2.67832 9.66957 18.79427 18.79427 0 0 0 18.79427 18.79429z" fill="#ffc431"></path>
+                                                                                            <g fill="#bed3f7">
+                                                                                                <path d="m144 168h64v64h-64z"></path>
+                                                                                                <path d="m144 264h64v64h-64z"></path>
+                                                                                                <path d="m144 360h64v64h-64z"></path>
+                                                                                            </g>
+                                                                                                <path d="m224.9082 33.60352-13.4375 22.39648h-123.4707a24.02718 24.02718 0 0 0 -24 24v392a24.02718 24.02718 0 0 0 24 24h336a24.02718 24.02718 0 0 0 24-24v-392a24.02718 24.02718 0 0 0 -24-24h-123.4707l-13.4375-22.396a36.25908 36.25908 0 0 0 -62.1836-.00048zm199.0918 38.39648a8.00917 8.00917 0 0 1 8 8v392a8.00917 8.00917 0 0 1 -8 8h-336a8.00917 8.00917 0 0 1 -8-8v-392a8.00917 8.00917 0 0 1 8-8h113.87061l-9.59961 16h-88.271a8.00008 8.00008 0 0 0 -8 8v360a8.00008 8.00008 0 0 0 8 8h304a8.00008 8.00008 0 0 0 8-8v-360a8.00008 8.00008 0 0 0 -8-8h-88.27051l-9.6001-16zm-213.206 64h90.4121a26.76656 26.76656 0 0 0 26.27735-32h72.51655v344h-288v-344h72.5166a26.76656 26.76656 0 0 0 26.2774 32zm45.206-104a20.35893 20.35893 0 0 1 17.37109 9.83545l37.09082 61.81738a10.79394 10.79394 0 0 1 -9.25586 16.34717h-90.41205a10.79306 10.79306 0 0 1 -9.25489-16.34766l37.08985-61.81689a20.35893 20.35893 0 0 1 17.37104-9.83545z"></path>
+                                                                                                <path d="m248 48h16v32h-16z"></path>
+                                                                                                <circle cx="256" cy="96" r="8"></circle>
+                                                                                                <path d="m218.34277 338.34326-56 56 11.31446 11.31348 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722z"></path>
+                                                                                                <path d="m240 368h24v16h-24z"></path>
+                                                                                                <path d="m280 368h88v16h-88z"></path>
+                                                                                                <path d="m312 400h24v16h-24z"></path>
+                                                                                                <path d="m240 400h56v16h-56z"></path>
+                                                                                                <path d="m162.34277 298.34326 11.31446 11.31348 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722-11.31446-11.31348z"></path>
+                                                                                                <path d="m240 272h24v16h-24z"></path>
+                                                                                                <path d="m280 272h88v16h-88z"></path>
+                                                                                                <path d="m312 304h24v16h-24z"></path>
+                                                                                                <path d="m240 304h56v16h-56z"></path>
+                                                                                                <path d="m173.65723 213.65674 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722-11.31446-11.31348-56 56z"></path>
+                                                                                                <path d="m240 176h24v16h-24z"></path>
+                                                                                                <path d="m280 176h88v16h-88z"></path>
+                                                                                                <path d="m312 208h24v16h-24z"></path>
+                                                                                                <path d="m240 208h56v16h-56z"></path>
+                                                                                        </svg> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>SEGURANÇA DO TRABALHO </span>
+                                                                                    </h3>
+                                                                                        <p class="elementor-icon-box-description">
+                                                                                            
+                                                                                        </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2954e8a" data-id="2954e8a" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-d895303 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="d895303" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 64 64" width="512">
+                                                                                            <g id="doctor-report-writing-pen-check">
+                                                                                                <path d="m61 45v16h-15v-24h7a8 8 0 0 1 8 8z" fill="#bdfdff"></path>
+                                                                                                <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                <path d="m58 19v6a12 12 0 0 1 -24 0v-6l15.65-5.22a4.012 4.012 0 0 1 4.1.97z" fill="#ffc477"></path>
+                                                                                                <path d="m61 45v16h-4v-16a8 8 0 0 0 -8-8h4a8 8 0 0 1 8 8z" fill="#00e7f0"></path>
+                                                                                                <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                <path d="m58 19v6a11.988 11.988 0 0 1 -14 11.83 11.99 11.99 0 0 0 10-11.83v-6l-4.25-4.25a3.925 3.925 0 0 0 -.94-.69l.84-.28a4.012 4.012 0 0 1 4.1.97z" fill="#ff9811"></path>
+                                                                                                <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                <path d="m60 17v2h-2l-2-2a14.009 14.009 0 0 0 -11.99-13.86 14.454 14.454 0 0 1 1.99-.14 14 14 0 0 1 14 14z" fill="#ddb200"></path>
+                                                                                                <path d="m52 44h2v4h-4v-4z" fill="#b39a7c"></path>
+                                                                                                <path d="m39 37h7v24h-15v-16a8 8 0 0 1 8-8z" fill="#bdfdff"></path>
+                                                                                                <path d="m46 37h-7a8 8 0 0 0 -8 8v16h-28v-52h31.52a13.9 13.9 0 0 0 -2.52 8v2h2v6a12 12 0 0 0 12 12z" fill="#fee9ab"></path>
+                                                                                                <path d="m28 19v4h-4v4h-4v-4h-4v-4h4v-4h4v4z" fill="#ff3051"></path>
+                                                                                                <path d="m28 19v4h-4v4h-2v-12h2v4z" fill="#cd2a00"></path>
+                                                                                                <path d="m11 49v3h-4v-31a2.006 2.006 0 0 1 2-2 2.015 2.015 0 0 1 2 2z" fill="#b39a7c"></path>
+                                                                                                <path d="m11 21v31h-2v-31a1.955 1.955 0 0 0 -.59-1.41 1.813 1.813 0 0 0 -.41-.32 2 2 0 0 1 1-.27 2.015 2.015 0 0 1 2 2z" fill="#806749"></path>
+                                                                                                <path d="m11 52-2 6-2-6z" fill="#898890"></path>
+                                                                                                <path d="m11 52-2 6v-6z" fill="#57565c"></path>
+                                                                                                <path d="m46 32a4 4 0 0 1 -4-4h-2a6 6 0 0 0 12 0h-2a4 4 0 0 1 -4 4z"></path>
+                                                                                                <path d="m53 36h-.1a12.987 12.987 0 0 0 6.1-11v-5h1a1 1 0 0 0 1-1v-2a14.98 14.98 0 0 0 -26.97-9h-31.03a1 1 0 0 0 -1 1v52a1 1 0 0 0 1 1h58a1 1 0 0 0 1-1v-16a9.014 9.014 0 0 0 -9-9zm0 9v2h-2v-2zm-20-28a13 13 0 0 1 26 0v1h-.59l-3.95-3.96a4.981 4.981 0 0 0 -5.12-1.21l-15.5 5.17h-.84zm-2.94 27a8.262 8.262 0 0 0 -.06 1v3h-10v2h10v4h-10v2h10v4h-26v-50h28.74a14.873 14.873 0 0 0 -1.74 7v2a1 1 0 0 0 1 1h1v5a12.987 12.987 0 0 0 6.1 11h-.1a8.991 8.991 0 0 0 -8.47 6h-10.53v2zm14.94 16h-13v-15a7 7 0 0 1 6-6.92v8.92h-2a1 1 0 0 0 -1 1v6h2v-5h4v5h2v-6a1 1 0 0 0 -1-1h-2v-9h5zm-10-35v-5.28l14.97-4.99a2.985 2.985 0 0 1 3.07.73l3.96 3.95v5.59a11 11 0 0 1 -22 0zm25 35h-13v-22h4v5h-1a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1h-1v-5a7.008 7.008 0 0 1 7 7z"></path>
+                                                                                                <path d="m40 20h2v4h-2z"></path>
+                                                                                                <path d="m50 20h2v4h-2z"></path>
+                                                                                                <path d="m28 18h-3v-3a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v3h-3a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3h3a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1zm-1 4h-3a1 1 0 0 0 -1 1v3h-2v-3a1 1 0 0 0 -1-1h-3v-2h3a1 1 0 0 0 1-1v-3h2v3a1 1 0 0 0 1 1h3z"></path>
+                                                                                                <path d="m9 18a3.009 3.009 0 0 0 -3 3v31a1.185 1.185 0 0 0 .05.32l2 6a1 1 0 0 0 1.9 0l2-6a1.185 1.185 0 0 0 .05-.32v-31a3.009 3.009 0 0 0 -3-3zm0 36.84-.61-1.84h1.22zm1-3.84h-2v-30a1 1 0 0 1 2 0z"></path>
+                                                                                                <path d="m14 30h4v2h-4z"></path>
+                                                                                                <path d="m20 30h11v2h-11z"></path>
+                                                                                                <path d="m14 36h4v2h-4z"></path>
+                                                                                                <path d="m20 36h11v2h-11z"></path>
+                                                                                                <path d="m14 42h4v2h-4z"></path>
+                                                                                                <path d="m14 48h4v2h-4z"></path>
+                                                                                                <path d="m14 54h4v2h-4z"></path>
+                                                                                            </g>
+                                                                                        </svg> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>MEDICINA DO TRABALHO </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-178158b" data-id="178158b" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-d0e4946 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="d0e4946" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+                                                                                            <g>
+                                                                                                <rect x="5" y="8" width="42" height="49" style="fill:#3780ea"></rect>
+                                                                                                <path d="M35,6v7H17V6h6a3,3,0,0,1,6,0Z" style="fill:#e8e5fb"></path>
+                                                                                                <rect x="8" y="12" width="36" height="42" style="fill:#5bcbfa"></rect>
+                                                                                                <path d="M34.32,21A6.844,6.844,0,0,1,35,24H28V17A6.97,6.97,0,0,1,34.32,21Z" style="fill:#ec455a"></path>
+                                                                                                <path d="M25,27h7a7,7,0,1,1-7-7Z" style="fill:#f3ac3c"></path>
+                                                                                                <path d="M59,48.625v-3.25A1.376,1.376,0,0,0,57.625,44h0a1.35,1.35,0,0,1-1.285-.9,12,12,0,0,0-.567-1.368,1.353,1.353,0,0,1,.276-1.543h0a1.375,1.375,0,0,0,0-1.945l-2.3-2.3a1.375,1.375,0,0,0-1.945,0h0a1.353,1.353,0,0,1-1.543.276,12,12,0,0,0-1.368-.567,1.35,1.35,0,0,1-.9-1.285h0A1.376,1.376,0,0,0,46.625,33h-3.25A1.376,1.376,0,0,0,42,34.375h0a1.35,1.35,0,0,1-.9,1.285,12,12,0,0,0-1.368.567,1.353,1.353,0,0,1-1.543-.276h0a1.375,1.375,0,0,0-1.945,0l-2.3,2.3a1.375,1.375,0,0,0,0,1.945h0a1.353,1.353,0,0,1,.276,1.543,12,12,0,0,0-.567,1.368,1.35,1.35,0,0,1-1.285.9h0A1.376,1.376,0,0,0,31,45.375v3.25A1.376,1.376,0,0,0,32.375,50h0a1.35,1.35,0,0,1,1.285.9,12,12,0,0,0,.567,1.368,1.353,1.353,0,0,1-.276,1.543h0a1.375,1.375,0,0,0,0,1.945l2.3,2.3a1.375,1.375,0,0,0,1.945,0h0a1.353,1.353,0,0,1,1.543-.276,12,12,0,0,0,1.368.567,1.351,1.351,0,0,1,.9,1.285h0A1.376,1.376,0,0,0,43.375,61h3.25A1.376,1.376,0,0,0,48,59.625h0a1.351,1.351,0,0,1,.9-1.285,12,12,0,0,0,1.368-.567,1.353,1.353,0,0,1,1.543.276h0a1.375,1.375,0,0,0,1.945,0l2.3-2.3a1.375,1.375,0,0,0,0-1.945h0a1.353,1.353,0,0,1-.276-1.543,12,12,0,0,0,.567-1.368,1.35,1.35,0,0,1,1.285-.9h0A1.376,1.376,0,0,0,59,48.625Z" style="fill:#ec455a"></path>
+                                                                                                <circle cx="45" cy="47" r="8" style="fill:#f6cc4f"></circle>
+                                                                                                <circle cx="45" cy="47" r="4" style="fill:#9e2849"></circle>
+                                                                                                <path d="M45,38a9,9,0,1,0,9,9A9.01,9.01,0,0,0,45,38Zm0,16a7,7,0,1,1,7-7A7.008,7.008,0,0,1,45,54Z"></path>
+                                                                                                <path d="M45,42a5,5,0,1,0,5,5A5.006,5.006,0,0,0,45,42Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,45,50Z"></path>
+                                                                                                <path d="M17.263,29H13v2h5.082A7.994,7.994,0,0,0,33,27a1,1,0,0,0-1-1H26V20a1,1,0,0,0-1-1,7.969,7.969,0,0,0-7.737,10ZM24,21.083V27a1,1,0,0,0,1,1h5.917A5.991,5.991,0,0,1,20.54,31H24V29H19.35A5.982,5.982,0,0,1,24,21.083Z"></path>
+                                                                                                <path d="M28,25h7a1,1,0,0,0,1-1,7.953,7.953,0,0,0-.263-2H40V20H34.918A8,8,0,0,0,28,16a1,1,0,0,0-1,1v7A1,1,0,0,0,28,25Zm1-6.917A5.986,5.986,0,0,1,32.448,20H30v2h3.651a5.982,5.982,0,0,1,.266,1H29Z"></path>
+                                                                                                <path d="M57.62,43a.341.341,0,0,1-.33-.22,12.835,12.835,0,0,0-.62-1.48.375.375,0,0,1,.08-.4,2.372,2.372,0,0,0,0-3.36l-2.29-2.3a2.39,2.39,0,0,0-3.36,0,.361.361,0,0,1-.4.09,11.821,11.821,0,0,0-1.48-.61.365.365,0,0,1-.22-.34,2.372,2.372,0,0,0-1-1.93V8a1,1,0,0,0-1-1H36V6a1,1,0,0,0-1-1H29.87a4,4,0,0,0-7.74,0H17a1,1,0,0,0-1,1V7H5A1,1,0,0,0,4,8V57a1,1,0,0,0,1,1H34.79l.75.76a2.39,2.39,0,0,0,3.36,0,.361.361,0,0,1,.4-.09,11.821,11.821,0,0,0,1.48.61.365.365,0,0,1,.22.34A2.386,2.386,0,0,0,43.38,62h3.24A2.386,2.386,0,0,0,49,59.62a.365.365,0,0,1,.22-.34,11.821,11.821,0,0,0,1.48-.61.361.361,0,0,1,.4.09,2.39,2.39,0,0,0,3.36,0l2.29-2.3a2.381,2.381,0,0,0,.01-3.36.361.361,0,0,1-.09-.4,12.835,12.835,0,0,0,.62-1.48.341.341,0,0,1,.33-.22A2.386,2.386,0,0,0,60,48.62V45.38A2.386,2.386,0,0,0,57.62,43ZM36,9H46V32H45V12a1,1,0,0,0-1-1H36ZM18,7h5a1,1,0,0,0,1-1,2,2,0,0,1,4,0,1,1,0,0,0,1,1h5v5H18ZM6,56V9H16v2H8a1,1,0,0,0-1,1V54a1,1,0,0,0,1,1H32.57a2.278,2.278,0,0,0,.33,1Zm27.3-3H9V13h7a1,1,0,0,0,1,1H35a1,1,0,0,0,1-1h7V32.04a2.369,2.369,0,0,0-2,2.34.365.365,0,0,1-.22.34,11.821,11.821,0,0,0-1.48.61.361.361,0,0,1-.4-.09,2.39,2.39,0,0,0-3.36,0l-2.29,2.3a2.155,2.155,0,0,0-.35.46H11v2H32.69a2.285,2.285,0,0,0,.55.9.361.361,0,0,1,.09.4c-.11.22-.19.47-.29.7H11v2H30.45A2.348,2.348,0,0,0,30,45.38V46H11v2H30v.62A2.386,2.386,0,0,0,32.38,51a.341.341,0,0,1,.33.22,12.835,12.835,0,0,0,.62,1.48A.358.358,0,0,1,33.3,53ZM58,48.62a.38.38,0,0,1-.38.38,2.345,2.345,0,0,0-2.23,1.57,9.142,9.142,0,0,1-.52,1.25,2.367,2.367,0,0,0,.47,2.69.368.368,0,0,1,0,.53l-2.3,2.3a.368.368,0,0,1-.53,0,2.344,2.344,0,0,0-2.68-.47,9.828,9.828,0,0,1-1.26.52A2.345,2.345,0,0,0,47,59.62a.38.38,0,0,1-.38.38H43.38a.38.38,0,0,1-.38-.38,2.345,2.345,0,0,0-1.57-2.23,9.142,9.142,0,0,1-1.25-.52,2.4,2.4,0,0,0-1.01-.23,2.362,2.362,0,0,0-1.68.7.368.368,0,0,1-.53,0l-2.3-2.3a.368.368,0,0,1,0-.53,2.367,2.367,0,0,0,.47-2.69,9.142,9.142,0,0,1-.52-1.25A2.345,2.345,0,0,0,32.38,49a.38.38,0,0,1-.38-.38V45.38a.38.38,0,0,1,.38-.38,2.345,2.345,0,0,0,2.23-1.57,9.142,9.142,0,0,1,.52-1.25,2.367,2.367,0,0,0-.47-2.69.368.368,0,0,1,0-.53l2.3-2.3a.368.368,0,0,1,.53,0,2.339,2.339,0,0,0,2.68.47,9.828,9.828,0,0,1,1.26-.52A2.345,2.345,0,0,0,43,34.38a.38.38,0,0,1,.38-.38h3.24a.38.38,0,0,1,.38.38,2.345,2.345,0,0,0,1.57,2.23,9.142,9.142,0,0,1,1.25.52,2.351,2.351,0,0,0,2.69-.47.368.368,0,0,1,.53,0l2.3,2.3a.368.368,0,0,1,0,.53,2.367,2.367,0,0,0-.47,2.69,9.142,9.142,0,0,1,.52,1.25A2.345,2.345,0,0,0,57.62,45a.38.38,0,0,1,.38.38Z"></path>
+                                                                                            </g>
+                                                                                        </svg> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>TREINAMENTOS </span>
+                                                                                            </h3>
+                                                                                                <p class="elementor-icon-box-description">
+
+                                                                                                </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                    <div class="elementor-container elementor-column-gap-narrow">
+                                                        <div class="elementor-row">
+                                                            <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-296e347" data-id="296e347" data-element_type="column">
+                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                    <div class="elementor-widget-wrap">
+                                                                        <div class="elementor-element elementor-element-98e3e01 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="98e3e01" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-icon-box-wrapper">
+                                                                                    <div class="elementor-icon-box-icon">
+                                                                                        <span class="elementor-icon elementor-animation-">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" id="filled_outline" height="512" viewBox="0 0 512 512" width="512" data-name="filled outline">
+                                                                                                <rect fill="#c78640" height="424" rx="16" width="368" x="72" y="64"></rect>
+                                                                                                <path d="m104 96h304v360h-304z" fill="#e0edff"></path>
+                                                                                                <path d="m210.79427 128h90.41146a18.79427 18.79427 0 0 0 18.79427-18.79427 18.79418 18.79418 0 0 0 -2.67832-9.66957l-37.08976-61.81629a28.259 28.259 0 0 0 -24.23192-13.71987 28.259 28.259 0 0 0 -24.2319 13.71987l-37.08978 61.81627a18.79418 18.79418 0 0 0 -2.67832 9.66957 18.79427 18.79427 0 0 0 18.79427 18.79429z" fill="#ffc431"></path>
+                                                                                                <g fill="#bed3f7">
+                                                                                                    <path d="m144 168h64v64h-64z"></path>
+                                                                                                    <path d="m144 264h64v64h-64z"></path>
+                                                                                                    <path d="m144 360h64v64h-64z"></path>
+                                                                                                </g>
+                                                                                                    <path d="m224.9082 33.60352-13.4375 22.39648h-123.4707a24.02718 24.02718 0 0 0 -24 24v392a24.02718 24.02718 0 0 0 24 24h336a24.02718 24.02718 0 0 0 24-24v-392a24.02718 24.02718 0 0 0 -24-24h-123.4707l-13.4375-22.396a36.25908 36.25908 0 0 0 -62.1836-.00048zm199.0918 38.39648a8.00917 8.00917 0 0 1 8 8v392a8.00917 8.00917 0 0 1 -8 8h-336a8.00917 8.00917 0 0 1 -8-8v-392a8.00917 8.00917 0 0 1 8-8h113.87061l-9.59961 16h-88.271a8.00008 8.00008 0 0 0 -8 8v360a8.00008 8.00008 0 0 0 8 8h304a8.00008 8.00008 0 0 0 8-8v-360a8.00008 8.00008 0 0 0 -8-8h-88.27051l-9.6001-16zm-213.206 64h90.4121a26.76656 26.76656 0 0 0 26.27735-32h72.51655v344h-288v-344h72.5166a26.76656 26.76656 0 0 0 26.2774 32zm45.206-104a20.35893 20.35893 0 0 1 17.37109 9.83545l37.09082 61.81738a10.79394 10.79394 0 0 1 -9.25586 16.34717h-90.41205a10.79306 10.79306 0 0 1 -9.25489-16.34766l37.08985-61.81689a20.35893 20.35893 0 0 1 17.37104-9.83545z"></path>
+                                                                                                    <path d="m248 48h16v32h-16z"></path>
+                                                                                                    <circle cx="256" cy="96" r="8"></circle>
+                                                                                                    <path d="m218.34277 338.34326-56 56 11.31446 11.31348 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722z"></path>
+                                                                                                    <path d="m240 368h24v16h-24z"></path>
+                                                                                                    <path d="m280 368h88v16h-88z"></path>
+                                                                                                    <path d="m312 400h24v16h-24z"></path>
+                                                                                                    <path d="m240 400h56v16h-56z"></path>
+                                                                                                    <path d="m162.34277 298.34326 11.31446 11.31348 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722-11.31446-11.31348z"></path>
+                                                                                                    <path d="m240 272h24v16h-24z"></path>
+                                                                                                    <path d="m280 272h88v16h-88z"></path>
+                                                                                                    <path d="m312 304h24v16h-24z"></path>
+                                                                                                    <path d="m240 304h56v16h-56z"></path>
+                                                                                                    <path d="m173.65723 213.65674 26.34277-26.34274v36.686h-48v-48h24v-16h-32a8.00008 8.00008 0 0 0 -8 8v64a8.00008 8.00008 0 0 0 8 8h64a8.00008 8.00008 0 0 0 8-8v-60.686l13.65723-13.65722-11.31446-11.31348-56 56z"></path>
+                                                                                                    <path d="m240 176h24v16h-24z"></path>
+                                                                                                    <path d="m280 176h88v16h-88z"></path>
+                                                                                                    <path d="m312 208h24v16h-24z"></path>
+                                                                                                    <path d="m240 208h56v16h-56z"></path>
+                                                                                            </svg> 
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="elementor-icon-box-content">
+                                                                                        <h3 class="elementor-icon-box-title">
+                                                                                            <span>PPR </span>
+                                                                                        </h3>
+                                                                                            <p class="elementor-icon-box-description">
+                                                                                                
+                                                                                            </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-2954e8a" data-id="2954e8a" data-element_type="column">
+                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                    <div class="elementor-widget-wrap">
+                                                                        <div class="elementor-element elementor-element-d895303 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="d895303" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-icon-box-wrapper">
+                                                                                    <div class="elementor-icon-box-icon">
+                                                                                        <span class="elementor-icon elementor-animation-">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" height="512" viewBox="0 0 64 64" width="512">
+                                                                                                <g id="doctor-report-writing-pen-check">
+                                                                                                    <path d="m61 45v16h-15v-24h7a8 8 0 0 1 8 8z" fill="#bdfdff"></path>
+                                                                                                    <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                    <path d="m58 19v6a12 12 0 0 1 -24 0v-6l15.65-5.22a4.012 4.012 0 0 1 4.1.97z" fill="#ffc477"></path>
+                                                                                                    <path d="m61 45v16h-4v-16a8 8 0 0 0 -8-8h4a8 8 0 0 1 8 8z" fill="#00e7f0"></path>
+                                                                                                    <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                    <path d="m58 19v6a11.988 11.988 0 0 1 -14 11.83 11.99 11.99 0 0 0 10-11.83v-6l-4.25-4.25a3.925 3.925 0 0 0 -.94-.69l.84-.28a4.012 4.012 0 0 1 4.1.97z" fill="#ff9811"></path>
+                                                                                                    <path d="m60 17v2h-2l-4.25-4.25a4.012 4.012 0 0 0 -4.1-.97l-15.65 5.22h-2v-2a14 14 0 1 1 28 0z" fill="#ffcd00"></path>
+                                                                                                    <path d="m60 17v2h-2l-2-2a14.009 14.009 0 0 0 -11.99-13.86 14.454 14.454 0 0 1 1.99-.14 14 14 0 0 1 14 14z" fill="#ddb200"></path>
+                                                                                                    <path d="m52 44h2v4h-4v-4z" fill="#b39a7c"></path>
+                                                                                                    <path d="m39 37h7v24h-15v-16a8 8 0 0 1 8-8z" fill="#bdfdff"></path>
+                                                                                                    <path d="m46 37h-7a8 8 0 0 0 -8 8v16h-28v-52h31.52a13.9 13.9 0 0 0 -2.52 8v2h2v6a12 12 0 0 0 12 12z" fill="#fee9ab"></path>
+                                                                                                    <path d="m28 19v4h-4v4h-4v-4h-4v-4h4v-4h4v4z" fill="#ff3051"></path>
+                                                                                                    <path d="m28 19v4h-4v4h-2v-12h2v4z" fill="#cd2a00"></path>
+                                                                                                    <path d="m11 49v3h-4v-31a2.006 2.006 0 0 1 2-2 2.015 2.015 0 0 1 2 2z" fill="#b39a7c"></path>
+                                                                                                    <path d="m11 21v31h-2v-31a1.955 1.955 0 0 0 -.59-1.41 1.813 1.813 0 0 0 -.41-.32 2 2 0 0 1 1-.27 2.015 2.015 0 0 1 2 2z" fill="#806749"></path>
+                                                                                                    <path d="m11 52-2 6-2-6z" fill="#898890"></path>
+                                                                                                    <path d="m11 52-2 6v-6z" fill="#57565c"></path>
+                                                                                                    <path d="m46 32a4 4 0 0 1 -4-4h-2a6 6 0 0 0 12 0h-2a4 4 0 0 1 -4 4z"></path>
+                                                                                                    <path d="m53 36h-.1a12.987 12.987 0 0 0 6.1-11v-5h1a1 1 0 0 0 1-1v-2a14.98 14.98 0 0 0 -26.97-9h-31.03a1 1 0 0 0 -1 1v52a1 1 0 0 0 1 1h58a1 1 0 0 0 1-1v-16a9.014 9.014 0 0 0 -9-9zm0 9v2h-2v-2zm-20-28a13 13 0 0 1 26 0v1h-.59l-3.95-3.96a4.981 4.981 0 0 0 -5.12-1.21l-15.5 5.17h-.84zm-2.94 27a8.262 8.262 0 0 0 -.06 1v3h-10v2h10v4h-10v2h10v4h-26v-50h28.74a14.873 14.873 0 0 0 -1.74 7v2a1 1 0 0 0 1 1h1v5a12.987 12.987 0 0 0 6.1 11h-.1a8.991 8.991 0 0 0 -8.47 6h-10.53v2zm14.94 16h-13v-15a7 7 0 0 1 6-6.92v8.92h-2a1 1 0 0 0 -1 1v6h2v-5h4v5h2v-6a1 1 0 0 0 -1-1h-2v-9h5zm-10-35v-5.28l14.97-4.99a2.985 2.985 0 0 1 3.07.73l3.96 3.95v5.59a11 11 0 0 1 -22 0zm25 35h-13v-22h4v5h-1a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1h-1v-5a7.008 7.008 0 0 1 7 7z"></path>
+                                                                                                    <path d="m40 20h2v4h-2z"></path>
+                                                                                                    <path d="m50 20h2v4h-2z"></path>
+                                                                                                    <path d="m28 18h-3v-3a1 1 0 0 0 -1-1h-4a1 1 0 0 0 -1 1v3h-3a1 1 0 0 0 -1 1v4a1 1 0 0 0 1 1h3v3a1 1 0 0 0 1 1h4a1 1 0 0 0 1-1v-3h3a1 1 0 0 0 1-1v-4a1 1 0 0 0 -1-1zm-1 4h-3a1 1 0 0 0 -1 1v3h-2v-3a1 1 0 0 0 -1-1h-3v-2h3a1 1 0 0 0 1-1v-3h2v3a1 1 0 0 0 1 1h3z"></path>
+                                                                                                    <path d="m9 18a3.009 3.009 0 0 0 -3 3v31a1.185 1.185 0 0 0 .05.32l2 6a1 1 0 0 0 1.9 0l2-6a1.185 1.185 0 0 0 .05-.32v-31a3.009 3.009 0 0 0 -3-3zm0 36.84-.61-1.84h1.22zm1-3.84h-2v-30a1 1 0 0 1 2 0z"></path>
+                                                                                                    <path d="m14 30h4v2h-4z"></path>
+                                                                                                    <path d="m20 30h11v2h-11z"></path>
+                                                                                                    <path d="m14 36h4v2h-4z"></path>
+                                                                                                    <path d="m20 36h11v2h-11z"></path>
+                                                                                                    <path d="m14 42h4v2h-4z"></path>
+                                                                                                    <path d="m14 48h4v2h-4z"></path>
+                                                                                                    <path d="m14 54h4v2h-4z"></path>
+                                                                                                </g>
+                                                                                            </svg> 
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="elementor-icon-box-content">
+                                                                                        <h3 class="elementor-icon-box-title">
+                                                                                            <span>PCMAT </span>
+                                                                                        </h3>
+                                                                                        <p class="elementor-icon-box-description">
+                                                                                            
+                                                                                        </p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="elementor-column elementor-col-33 elementor-inner-column elementor-element elementor-element-178158b" data-id="178158b" data-element_type="column">
+                                                                <div class="elementor-column-wrap elementor-element-populated">
+                                                                    <div class="elementor-widget-wrap">
+                                                                        <div class="elementor-element elementor-element-d0e4946 elementor-view-default elementor-mobile-position-top elementor-vertical-align-top elementor-widget elementor-widget-icon-box" data-id="d0e4946" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                            <div class="elementor-widget-container">
+                                                                                <div class="elementor-icon-box-wrapper">
+                                                                                    <div class="elementor-icon-box-icon">
+                                                                                        <span class="elementor-icon elementor-animation-">
+                                                                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="512" height="512">
+                                                                                                <g>
+                                                                                                    <rect x="5" y="8" width="42" height="49" style="fill:#3780ea"></rect>
+                                                                                                    <path d="M35,6v7H17V6h6a3,3,0,0,1,6,0Z" style="fill:#e8e5fb"></path>
+                                                                                                    <rect x="8" y="12" width="36" height="42" style="fill:#5bcbfa"></rect>
+                                                                                                    <path d="M34.32,21A6.844,6.844,0,0,1,35,24H28V17A6.97,6.97,0,0,1,34.32,21Z" style="fill:#ec455a"></path>
+                                                                                                    <path d="M25,27h7a7,7,0,1,1-7-7Z" style="fill:#f3ac3c"></path>
+                                                                                                    <path d="M59,48.625v-3.25A1.376,1.376,0,0,0,57.625,44h0a1.35,1.35,0,0,1-1.285-.9,12,12,0,0,0-.567-1.368,1.353,1.353,0,0,1,.276-1.543h0a1.375,1.375,0,0,0,0-1.945l-2.3-2.3a1.375,1.375,0,0,0-1.945,0h0a1.353,1.353,0,0,1-1.543.276,12,12,0,0,0-1.368-.567,1.35,1.35,0,0,1-.9-1.285h0A1.376,1.376,0,0,0,46.625,33h-3.25A1.376,1.376,0,0,0,42,34.375h0a1.35,1.35,0,0,1-.9,1.285,12,12,0,0,0-1.368.567,1.353,1.353,0,0,1-1.543-.276h0a1.375,1.375,0,0,0-1.945,0l-2.3,2.3a1.375,1.375,0,0,0,0,1.945h0a1.353,1.353,0,0,1,.276,1.543,12,12,0,0,0-.567,1.368,1.35,1.35,0,0,1-1.285.9h0A1.376,1.376,0,0,0,31,45.375v3.25A1.376,1.376,0,0,0,32.375,50h0a1.35,1.35,0,0,1,1.285.9,12,12,0,0,0,.567,1.368,1.353,1.353,0,0,1-.276,1.543h0a1.375,1.375,0,0,0,0,1.945l2.3,2.3a1.375,1.375,0,0,0,1.945,0h0a1.353,1.353,0,0,1,1.543-.276,12,12,0,0,0,1.368.567,1.351,1.351,0,0,1,.9,1.285h0A1.376,1.376,0,0,0,43.375,61h3.25A1.376,1.376,0,0,0,48,59.625h0a1.351,1.351,0,0,1,.9-1.285,12,12,0,0,0,1.368-.567,1.353,1.353,0,0,1,1.543.276h0a1.375,1.375,0,0,0,1.945,0l2.3-2.3a1.375,1.375,0,0,0,0-1.945h0a1.353,1.353,0,0,1-.276-1.543,12,12,0,0,0,.567-1.368,1.35,1.35,0,0,1,1.285-.9h0A1.376,1.376,0,0,0,59,48.625Z" style="fill:#ec455a"></path>
+                                                                                                    <circle cx="45" cy="47" r="8" style="fill:#f6cc4f"></circle>
+                                                                                                    <circle cx="45" cy="47" r="4" style="fill:#9e2849"></circle>
+                                                                                                    <path d="M45,38a9,9,0,1,0,9,9A9.01,9.01,0,0,0,45,38Zm0,16a7,7,0,1,1,7-7A7.008,7.008,0,0,1,45,54Z"></path>
+                                                                                                    <path d="M45,42a5,5,0,1,0,5,5A5.006,5.006,0,0,0,45,42Zm0,8a3,3,0,1,1,3-3A3,3,0,0,1,45,50Z"></path>
+                                                                                                    <path d="M17.263,29H13v2h5.082A7.994,7.994,0,0,0,33,27a1,1,0,0,0-1-1H26V20a1,1,0,0,0-1-1,7.969,7.969,0,0,0-7.737,10ZM24,21.083V27a1,1,0,0,0,1,1h5.917A5.991,5.991,0,0,1,20.54,31H24V29H19.35A5.982,5.982,0,0,1,24,21.083Z"></path>
+                                                                                                    <path d="M28,25h7a1,1,0,0,0,1-1,7.953,7.953,0,0,0-.263-2H40V20H34.918A8,8,0,0,0,28,16a1,1,0,0,0-1,1v7A1,1,0,0,0,28,25Zm1-6.917A5.986,5.986,0,0,1,32.448,20H30v2h3.651a5.982,5.982,0,0,1,.266,1H29Z"></path>
+                                                                                                    <path d="M57.62,43a.341.341,0,0,1-.33-.22,12.835,12.835,0,0,0-.62-1.48.375.375,0,0,1,.08-.4,2.372,2.372,0,0,0,0-3.36l-2.29-2.3a2.39,2.39,0,0,0-3.36,0,.361.361,0,0,1-.4.09,11.821,11.821,0,0,0-1.48-.61.365.365,0,0,1-.22-.34,2.372,2.372,0,0,0-1-1.93V8a1,1,0,0,0-1-1H36V6a1,1,0,0,0-1-1H29.87a4,4,0,0,0-7.74,0H17a1,1,0,0,0-1,1V7H5A1,1,0,0,0,4,8V57a1,1,0,0,0,1,1H34.79l.75.76a2.39,2.39,0,0,0,3.36,0,.361.361,0,0,1,.4-.09,11.821,11.821,0,0,0,1.48.61.365.365,0,0,1,.22.34A2.386,2.386,0,0,0,43.38,62h3.24A2.386,2.386,0,0,0,49,59.62a.365.365,0,0,1,.22-.34,11.821,11.821,0,0,0,1.48-.61.361.361,0,0,1,.4.09,2.39,2.39,0,0,0,3.36,0l2.29-2.3a2.381,2.381,0,0,0,.01-3.36.361.361,0,0,1-.09-.4,12.835,12.835,0,0,0,.62-1.48.341.341,0,0,1,.33-.22A2.386,2.386,0,0,0,60,48.62V45.38A2.386,2.386,0,0,0,57.62,43ZM36,9H46V32H45V12a1,1,0,0,0-1-1H36ZM18,7h5a1,1,0,0,0,1-1,2,2,0,0,1,4,0,1,1,0,0,0,1,1h5v5H18ZM6,56V9H16v2H8a1,1,0,0,0-1,1V54a1,1,0,0,0,1,1H32.57a2.278,2.278,0,0,0,.33,1Zm27.3-3H9V13h7a1,1,0,0,0,1,1H35a1,1,0,0,0,1-1h7V32.04a2.369,2.369,0,0,0-2,2.34.365.365,0,0,1-.22.34,11.821,11.821,0,0,0-1.48.61.361.361,0,0,1-.4-.09,2.39,2.39,0,0,0-3.36,0l-2.29,2.3a2.155,2.155,0,0,0-.35.46H11v2H32.69a2.285,2.285,0,0,0,.55.9.361.361,0,0,1,.09.4c-.11.22-.19.47-.29.7H11v2H30.45A2.348,2.348,0,0,0,30,45.38V46H11v2H30v.62A2.386,2.386,0,0,0,32.38,51a.341.341,0,0,1,.33.22,12.835,12.835,0,0,0,.62,1.48A.358.358,0,0,1,33.3,53ZM58,48.62a.38.38,0,0,1-.38.38,2.345,2.345,0,0,0-2.23,1.57,9.142,9.142,0,0,1-.52,1.25,2.367,2.367,0,0,0,.47,2.69.368.368,0,0,1,0,.53l-2.3,2.3a.368.368,0,0,1-.53,0,2.344,2.344,0,0,0-2.68-.47,9.828,9.828,0,0,1-1.26.52A2.345,2.345,0,0,0,47,59.62a.38.38,0,0,1-.38.38H43.38a.38.38,0,0,1-.38-.38,2.345,2.345,0,0,0-1.57-2.23,9.142,9.142,0,0,1-1.25-.52,2.4,2.4,0,0,0-1.01-.23,2.362,2.362,0,0,0-1.68.7.368.368,0,0,1-.53,0l-2.3-2.3a.368.368,0,0,1,0-.53,2.367,2.367,0,0,0,.47-2.69,9.142,9.142,0,0,1-.52-1.25A2.345,2.345,0,0,0,32.38,49a.38.38,0,0,1-.38-.38V45.38a.38.38,0,0,1,.38-.38,2.345,2.345,0,0,0,2.23-1.57,9.142,9.142,0,0,1,.52-1.25,2.367,2.367,0,0,0-.47-2.69.368.368,0,0,1,0-.53l2.3-2.3a.368.368,0,0,1,.53,0,2.339,2.339,0,0,0,2.68.47,9.828,9.828,0,0,1,1.26-.52A2.345,2.345,0,0,0,43,34.38a.38.38,0,0,1,.38-.38h3.24a.38.38,0,0,1,.38.38,2.345,2.345,0,0,0,1.57,2.23,9.142,9.142,0,0,1,1.25.52,2.351,2.351,0,0,0,2.69-.47.368.368,0,0,1,.53,0l2.3,2.3a.368.368,0,0,1,0,.53,2.367,2.367,0,0,0-.47,2.69,9.142,9.142,0,0,1,.52,1.25A2.345,2.345,0,0,0,57.62,45a.38.38,0,0,1,.38.38Z"></path>
+                                                                                                </g>
+                                                                                            </svg> 
+                                                                                        </span>
+                                                                                    </div>
+                                                                                    <div class="elementor-icon-box-content">
+                                                                                        <h3 class="elementor-icon-box-title">
+                                                                                            <span>PPP </span>
+                                                                                                </h3>
+                                                                                                    <p class="elementor-icon-box-description">Perfil Profissiográfico Previdenciário <br>TREINAMENTOS</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                            </section>
+                                            <div class="elementor-element elementor-element-7f5c34c elementor-widget elementor-widget-spacer" data-id="7f5c34c" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"> 
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-2ea597d elementor-align-center elementor-widget elementor-widget-button" data-id="2ea597d" data-element_type="widget" data-widget_type="button.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-button-wrapper">
+                                                        <a href="#contatos" class="elementor-button-link elementor-button elementor-size-md" role="button">
+                                                            <span class="elementor-button-content-wrapper">
+                                                                <span class="elementor-button-text">ENTRE EM CONTATO</span>
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-2930af2 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="2930af2" data-element_type="section" id="depoimentos">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-2d0d938" data-id="2d0d938" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-7f0a7ab elementor-widget elementor-widget-heading" data-id="7f0a7ab" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Vejam oque nossos clientes dizem:</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-ba6e73f elementor-widget elementor-widget-heading" data-id="ba6e73f" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">DEPOIMENTOS</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-b185be5 elementor-widget elementor-widget-spacer" data-id="b185be5" data-element_type="widget" data-widget_type="spacer.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-spacer">
+                                                        <div class="elementor-spacer-inner"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-8b856e0 elementor-section-content-middle elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="8b856e0" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-default">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-2ac27fd" data-id="2ac27fd" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-b13050f elementor-widget elementor-widget-heading" data-id="b13050f" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h2 class="elementor-heading-title elementor-size-default">CLIENTES</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-c7143b7 elementor-widget elementor-widget-heading" data-id="c7143b7" data-element_type="widget" data-widget_type="heading.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <h2 class="elementor-heading-title elementor-size-default">Pacientes e clientes<br>felizes</h2>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-43b80bd elementor-widget elementor-widget-text-editor" data-id="43b80bd" data-element_type="widget" data-widget_type="text-editor.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-text-editor elementor-clearfix">
+                                                                                <p>Se você precisar de ajuda, estamos à sua disposição.</p>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                        <div class="elementor-column elementor-col-50 elementor-inner-column elementor-element elementor-element-d830f0f" data-id="d830f0f" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-92ad4d5 elementor-testimonial--skin-default elementor-testimonial--layout-image_inline elementor-testimonial--align-center elementor-arrows-yes elementor-widget elementor-widget-testimonial-carousel" data-id="92ad4d5" data-element_type="widget" data-settings="{&quot;show_arrows&quot;:&quot;yes&quot;,&quot;speed&quot;:500,&quot;autoplay&quot;:&quot;yes&quot;,&quot;autoplay_speed&quot;:5000,&quot;loop&quot;:&quot;yes&quot;,&quot;pause_on_hover&quot;:&quot;yes&quot;,&quot;pause_on_interaction&quot;:&quot;yes&quot;,&quot;space_between&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_tablet&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]},&quot;space_between_mobile&quot;:{&quot;unit&quot;:&quot;px&quot;,&quot;size&quot;:10,&quot;sizes&quot;:[]}}" data-widget_type="testimonial-carousel.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-swiper">
+                                                                                <div class="elementor-main-swiper swiper-container">
+                                                                                    <div class="swiper-wrapper">
+                                                                                        <div class="swiper-slide">
+                                                                                            <div class="elementor-testimonial">
+                                                                                                <div class="elementor-testimonial__content">
+                                                                                                    <div class="elementor-testimonial__text">
+                                                                                                        <p> Recomendo, bom atendimento, tempo mínimo de espera nos exames. Ótima localização e custo excelente; Aos amigos Téc. em Seguança do Trabalho, vale a pena orçar as documentações de trabalho. #PCMSO.
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-testimonial__footer">
+                                                                                                    <div class="elementor-testimonial__image">
+                                                                                                        <img decoding="async" src="image/vanderlei.png" alt="Vanderlei Neres">
+                                                                                                    </div>
+                                                                                                        <cite class="elementor-testimonial__cite">
+                                                                                                            <span class="elementor-testimonial__name">Vanderlei Neres</span>
+                                                                                                        </cite>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="swiper-slide">
+                                                                                            <div class="elementor-testimonial">
+                                                                                                <div class="elementor-testimonial__content">
+                                                                                                    <div class="elementor-testimonial__text">
+                                                                                                        Excelente empresa, com profissionais capacitados e uma ótima qualidade no atendimento... sem contar no espaço, que foi decorado com muito carinho e oferece o maximo de conforto para o cliente.
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-testimonial__footer">
+                                                                                                    <div class="elementor-testimonial__image">
+                                                                                                        <img decoding="async" src="https://simtese.com.br/wp-content/uploads/2020/08/Vagner-barbosa.png" alt="Vagner barbosa">
+                                                                                                    </div>
+                                                                                                        <cite class="elementor-testimonial__cite">
+                                                                                                            <span class="elementor-testimonial__name">Vagner barbosa</span>
+                                                                                                        </cite>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="swiper-slide">
+                                                                                            <div class="elementor-testimonial">
+                                                                                                <div class="elementor-testimonial__content">
+                                                                                                    <div class="elementor-testimonial__text">
+                                                                                                        Já fui atendido pelos profissionais envolvidos empreendimento, são profissionais de excelência! Profissionais dignos de suas formações! Continuarei utilizando seus serviços
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-testimonial__footer">
+                                                                                                            <div class="elementor-testimonial__image">
+                                                                                                                <img decoding="async" src="https://simtese.com.br/wp-content/uploads/2020/08/Linario-Leal.png" alt="Linario Leal">
+                                                                                                            </div>
+                                                                                                    <cite class="elementor-testimonial__cite">
+                                                                                                        <span class="elementor-testimonial__name">Linario Leal</span>
+                                                                                                    </cite>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="swiper-slide">
+                                                                                            <div class="elementor-testimonial">
+                                                                                                <div class="elementor-testimonial__content">
+                                                                                                    <div class="elementor-testimonial__text">
+                                                                                                        Além de um ambiente agradável, pude notar o comprometimento e profissionalismo da equipe, pessoas educadas, dedicadas e atenciosas, meus parabéns, esse é o verdadeiro caminho para o sucesso!
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-testimonial__footer">
+                                                                                                            <div class="elementor-testimonial__image">
+                                                                                                                <img decoding="async" src="https://simtese.com.br/wp-content/uploads/2020/08/Alexander-Agostinho.png" alt="Alexander Agostinho">
+                                                                                                            </div>
+                                                                                                    <cite class="elementor-testimonial__cite">
+                                                                                                        <span class="elementor-testimonial__name">Alexander Agostinho</span>
+                                                                                                    </cite>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                        <div class="swiper-slide">
+                                                                                            <div class="elementor-testimonial">
+                                                                                                <div class="elementor-testimonial__content">
+                                                                                                    <div class="elementor-testimonial__text">
+                                                                                                        Super recomendo... atendimento de primeira, transparência e profissionais altamente gabaritados! Parabéns
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                                <div class="elementor-testimonial__footer">
+                                                                                                    <div class="elementor-testimonial__image">
+                                                                                                        <img decoding="async" src="https://simtese.com.br/wp-content/uploads/2020/08/Jacques.png" alt="Jacques">
+                                                                                                    </div>
+                                                                                                        <cite class="elementor-testimonial__cite">
+                                                                                                            <span class="elementor-testimonial__name">Jacques</span>
+                                                                                                        </cite>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                -->
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-b107287 elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="b107287" data-element_type="section" id="contatos" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                        <div class="elementor-container elementor-column-gap-default">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-1269be9" data-id="1269be9" data-element_type="column" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-f38bfb5 elementor-widget elementor-widget-heading" data-id="f38bfb5" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Estamos te esperando</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-39968e0 elementor-widget elementor-widget-heading" data-id="39968e0" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Venha fazer um orçamento</h2>
+                                                </div>
+                                            </div>
+                                            <div class="elementor-element elementor-element-4419641 elementor-widget elementor-widget-text-editor" data-id="4419641" data-element_type="widget" data-widget_type="text-editor.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-text-editor elementor-clearfix">
+                                                        <p>Saúde, tecnologia e inovação com um atendimento personalizado que você merece.</p>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <section class="elementor-section elementor-inner-section elementor-element elementor-element-4de47ec elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="4de47ec" data-element_type="section">
+                                                <div class="elementor-container elementor-column-gap-no">
+                                                    <div class="elementor-row">
+                                                        <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-9668001" data-id="9668001" data-element_type="column">
+                                                            <div class="elementor-column-wrap elementor-element-populated">
+                                                                <div class="elementor-widget-wrap">
+                                                                    <div class="elementor-element elementor-element-a0ea387 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="a0ea387" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <i aria-hidden="true" class="fas fa-map-marker-alt"></i> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>EM BREVE NOVO ENDEREÇO </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Alto tietê
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-5268f16 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="5268f16" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <!---
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <a class="elementor-icon elementor-animation-" href="#mapa">
+                                                                                        <i aria-hidden="true" class="fas fa-mail-bulk"></i> 
+                                                                                    </a>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <a class="email" href="#">
+                                                                                            email protected
+                                                                                        </a>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Precisa de suporte? Envie-nos um email
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="elementor-element elementor-element-73aeac8 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="73aeac8" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <i aria-hidden="true" class="fas fa-phone-alt"></i> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>(11) 91111 - 1111 </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Tem uma questão? ligue agora
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                -->
+                                                                    <div class="elementor-element elementor-element-32ce1e5 elementor-view-framed elementor-shape-square elementor-position-left elementor-vertical-align-middle elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="32ce1e5" data-element_type="widget" data-widget_type="icon-box.default">
+                                                                        <div class="elementor-widget-container">
+                                                                            <div class="elementor-icon-box-wrapper">
+                                                                                <div class="elementor-icon-box-icon">
+                                                                                    <span class="elementor-icon elementor-animation-">
+                                                                                        <i aria-hidden="true" class="far fa-clock"></i> 
+                                                                                    </span>
+                                                                                </div>
+                                                                                <div class="elementor-icon-box-content">
+                                                                                    <h3 class="elementor-icon-box-title">
+                                                                                        <span>
+                                                                                            Seg. - Sex. 9:00 - 18:00. 
+                                                                                        </span>
+                                                                                    </h3>
+                                                                                    <p class="elementor-icon-box-description">
+                                                                                        Estamos abertos
+                                                                                    </p>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+                                            <div class="elementor-element elementor-element-7b0c3ec elementor-shape-circle e-grid-align-left elementor-grid-0 elementor-widget elementor-widget-social-icons" data-id="7b0c3ec" data-element_type="widget" data-widget_type="social-icons.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-social-icons-wrapper elementor-grid">
+                                                        <span class="elementor-grid-item">
+                                                            <!----
+                                                            <a href="" class="elementor-icon elementor-social-icon elementor-social-icon-facebook elementor-repeater-item-97974f8" target="_blank">
+                                                                <span class="elementor-screen-only">Facebook</span>
+                                                                    <i class="fab fa-facebook"></i>
+                                                            </a>
+                                                        </span>
+                                                            <span class="elementor-grid-item">
+                                                                <a class="elementor-icon elementor-social-icon elementor-social-icon-twitter elementor-repeater-item-96540cf" target="_blank">
+                                                                    <span class="elementor-screen-only">Twitter</span>
+                                                                        <i class="fab fa-twitter"></i> 
+                                                                </a>
+                                                            </span>
+                                                        --> <br><br>
+                                                                <span class="elementor-grid-item">
+                                                                    <a href="https://www.instagram.com/andra_segassessoria?igsh=bmlkZWZidnVmaHJi" class="elementor-icon elementor-social-icon elementor-social-icon-instagram elementor-repeater-item-8d4d431" target="_blank">
+                                                                        <span class="elementor-screen-only">Instagram</span>
+                                                                        <img src="image/logo-instagram-2048-removebg-preview.png" alt="" width="35%">
+                                                                    </a>
+                                                                </span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="elementor-column elementor-col-50 elementor-top-column elementor-element elementor-element-ab3b3d2" data-id="ab3b3d2" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-b6922e2 elementor-widget elementor-widget-heading" data-id="b6922e2" data-element_type="widget" data-widget_type="heading.default">
+                                                <div class="elementor-widget-container">
+                                                    <h2 class="elementor-heading-title elementor-size-default">Deixe-nos uma mensagem</h2>
+                                                </div>
+                                            </div>
+                                            <div class="form-container">
+                                                <form>
+                                                  <div class="form-element">
+                                                    <label class="form-label" for="name">Nome:</label> 
+                                                    <input class="form-input" type="text" id="name" name="name" placeholder="Insira seu nome" required>
+                                                    <div class="error-message" id="name-error"></div>
+                                                  </div>
+                                                  <div class="form-element">
+                                                    <label class="form-label" for="email">Email:</label>
+                                                    <input class="form-input" type="email" id="email" name="email" placeholder="insira um email valido" required>
+                                                    <div class="error-message" id="email-error"></div>
+                                                  </div>
+                                                  <div class="form-element">
+                                                    <label class="form-label" for="number">Numero whatsapp:</label>
+                                                    <input class="form-input" type="tel" id="tel" name="" placeholder="Insira seu telefone" required>
+                                                    <div class="error-message" id="tel-error"></div>
+                                                  </div>
+                                                  <div class="form-element">
+                                                    <label class="form-label" for="message">Mensagem:</label>
+                                                    <textarea class="form-input" id="message" name="message" rows="5" placeholder="Insira sua mensagem aqui" required></textarea>
+                                                    <div class="error-message" id="message-error"></div>
+                                                  </div>
+                                                  <div class="form-element">
+                                                    <button class="form-button" type="submit" onclick="validateForm()">ENVIAR</button>
+                                                  </div>
+                                                </form>
+                                              </div> 
+                                              
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+                    <!----
+                    <section class="elementor-section elementor-top-section elementor-element elementor-element-64f2835 elementor-section-stretched elementor-section-full_width elementor-section-height-default elementor-section-height-default" data-id="64f2835" data-element_type="section" id="mapa" data-settings="{&quot;stretch_section&quot;:&quot;section-stretched&quot;}">
+                        <div class="elementor-container elementor-column-gap-no">
+                            <div class="elementor-row">
+                                <div class="elementor-column elementor-col-100 elementor-top-column elementor-element elementor-element-7d138cd" data-id="7d138cd" data-element_type="column">
+                                    <div class="elementor-column-wrap elementor-element-populated">
+                                        <div class="elementor-widget-wrap">
+                                            <div class="elementor-element elementor-element-878e9b3 elementor-widget elementor-widget-google_maps" data-id="878e9b3" data-element_type="widget" data-widget_type="google_maps.default">
+                                                <div class="elementor-widget-container">
+                                                    <div class="elementor-custom-embed">
+                                                        <iframe class="maps" loading="lazy" src="https://maps.google.com/maps?q=Rua%20Vera%20da%20Silva%20Pereira%20%E2%80%93%20Jardim%20Oseias%20Genuino%2C%20Ferraz%20de%20Vasconcelos%20-%20SP%2C%2008532-468&#038;t=m&#038;z=17&#038;output=embed&#038;iwloc=near" title="Rua Vera da Silva Pereira, n°75 – Ferraz de Vasconcelos/SP – CEP:08532-468" aria-label="Rua Vera da Silva Pereira, n°75 – Ferraz de Vasconcelos/SP – CEP:08532-468"></iframe>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->  
+                </div>
+            </div>
+        </div>
+        <div class="post-tags"></div>
+    </div>
+    <section id="comments" class="comments-area"></section>
+</main>
+<div data-elementor-type="footer" data-elementor-id="553" class="elementor elementor-553 elementor-location-footer">
+    <div class="elementor-section-wrap">
+        <section class="elementor-section elementor-top-section elementor-element elementor-element-cead89f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="cead89f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-container elementor-column-gap-narrow">
+                <div class="elementor-row">
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-1ccb7aa" data-id="1ccb7aa" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-d873a63 elementor-widget elementor-widget-heading" data-id="d873a63" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Sobre</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-48341ed elementor-widget elementor-widget-text-editor" data-id="48341ed" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-text-editor elementor-clearfix">
+                                            <p>Os serviços de medicina e segurança do trabalho são essenciais para o bom funcionamento de uma empresa, e a resguarda de qualquer eventual acontecimento.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-970b02b" data-id="970b02b" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-3a219ca elementor-widget elementor-widget-heading" data-id="3a219ca" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">O Grupo</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-f14e235 elementor-nav-menu__text-align-center elementor-nav-menu--dropdown-tablet elementor-widget elementor-widget-nav-menu" data-id="f14e235" data-element_type="widget" data-settings="{&quot;layout&quot;:&quot;vertical&quot;,&quot;submenu_icon&quot;:{&quot;value&quot;:&quot;&lt;i class=\&quot;\&quot;&gt;&lt;\/i&gt;&quot;,&quot;library&quot;:&quot;&quot;}}" data-widget_type="nav-menu.default">
+                                    <div class="elementor-widget-container">
+                                        <nav migration_allowed="1" migrated="0" class="elementor-nav-menu--main elementor-nav-menu__container elementor-nav-menu--layout-vertical e--pointer-none"s>
+                                            <ul>
+                                              <a href="#sobre"><li class="item-empresa">A Empresa</li> </a> <br> 
+                                              <a href="#documentacao"><li class="item-documentacao">Documentação</li> </a> <br> 
+                                              <a href="#servicos"><li class="item-servicos">Serviços</li> </a> <br> 
+                                              <a href="#depoimentos"><li class="item-depoimentos">Depoimentos</li> </a> <br> 
+                                              <a href="#contatos"><li class="item-contatos">Contatos</li> </a> <br> 
+                                            </ul>
+                                        </nav>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-264eee5" data-id="264eee5" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-5169235 elementor-widget elementor-widget-heading" data-id="5169235" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Telefone</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-22217fb elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="22217fb" data-element_type="widget" data-widget_type="icon-box.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-icon-box-wrapper">
+                                            <div class="elementor-icon-box-icon">
+                                                <span class="elementor-icon elementor-animation-">
+                                                    <img src="image/tell.png" alt="" width="35%">
+                                                </span>
+                                            </div>
+                                            <div class="elementor-icon-box-content" style="padding-left: 10%; padding-bottom: 5%;">
+                                                <h3 class="elementor-icon-box-title">
+                                                    <span>
+                                                        (11) 97617-3213  <a href="https://web.whatsapp.com/send?phone=5511976173213" target="_blank"><img src="image/image-whatsapp.png" alt="" width="13%"> </a>
+                                                    </span>
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-011cef6" data-id="011cef6" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-fb0e7d0 elementor-widget elementor-widget-heading" data-id="fb0e7d0" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Instagram</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-1065733 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="1065733" data-element_type="widget" data-widget_type="icon-box.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-icon-box-wrapper">
+                                            <div class="elementor-icon-box-icon">
+                                                <a class="elementor-icon elementor-animation-" href="https://www.instagram.com/andra_segassessoria?igsh=bmlkZWZidnVmaHJi" target="_blank">
+                                                    <img src="image/insta.png" alt="" width="25%">
+                                                </a>
+                                            </div>
+                                            <div class="elementor-icon-box-content">
+                                                <h3 class="elementor-icon-box-title">
+                                                    <a href="https://www.instagram.com/andra_segassessoria?igsh=bmlkZWZidnVmaHJi" target="_blank" style="color: white;">
+                                                        andra_segassessoria
+                                                    </a>                                                      
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="elementor-column elementor-col-25 elementor-top-column elementor-element elementor-element-011cef6" data-id="011cef6" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-fb0e7d0 elementor-widget elementor-widget-heading" data-id="fb0e7d0" data-element_type="widget" data-widget_type="heading.default">
+                                    <div class="elementor-widget-container">
+                                        <h2 class="text-icon elementor-heading-title elementor-size-default">Linha ética</h2>
+                                    </div>
+                                </div>
+                                <div class="elementor-element elementor-element-1065733 elementor-position-left elementor-vertical-align-middle elementor-view-default elementor-mobile-position-top elementor-widget elementor-widget-icon-box" data-id="1065733" data-element_type="widget" data-widget_type="icon-box.default">
+                                    <div class="elementor-widget-container">
+                                        <div class="elementor-icon-box-wrapper">
+                                            <div class="elementor-icon-box-icon">
+                                                <a class="elementor-icon elementor-animation-" href="mailto:ouvidoria@andraseg.com" target="_blank">
+                                                    <img src="image/email.png" alt="" width="28%">
+                                                </a>
+                                            </div>
+                                            <div class="elementor-icon-box-content">
+                                                <h3 class="elementor-icon-box-title">
+                                                    <a href="mailto:ouvidoria@andraseg.com" target="_blank" style="color: white;">
+                                                        ouvidoria@andraseg.com
+                                                    </a>                                                      
+                                                </h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="elementor-section elementor-inner-section elementor-element elementor-element-1f65413f elementor-section-boxed elementor-section-height-default elementor-section-height-default" data-id="1f65413f" data-element_type="section" data-settings="{&quot;background_background&quot;:&quot;classic&quot;}">
+            <div class="elementor-container elementor-column-gap-default">
+                <div class="elementor-row">
+                    <div class="elementor-column elementor-col-100 elementor-inner-column elementor-element elementor-element-4b91e58e" data-id="4b91e58e" data-element_type="column">
+                        <div class="elementor-column-wrap elementor-element-populated">
+                            <div class="elementor-widget-wrap">
+                                <div class="elementor-element elementor-element-6a6fcd51 elementor-widget elementor-widget-text-editor" data-id="6a6fcd51" data-element_type="widget" data-widget_type="text-editor.default">
+                                    <div class="elementor-widget-container">
+                                        <center>
+                                            <footer class="footer-final" style="background-color: #0c4d5f; width: 100%; padding: 0.1em;">
+                                                <p class="rodape-text">©2026 – Todos os direitos reservados
+                                                </p>
+                                            </footer>                                              
+                                        </center>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</div>
+
+
+<div id="whatsapp-button">
+    <a id="whatsapp-link" href="https://wa.me/5511976173213" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-whatsapp"></i>   
+    </a>
+</div>
+
+<div id="back-to-top-container">
+    <button onclick="smoothScrollToTop()" id="back-to-top" title="Voltar ao topo">&#8593;</button>
+</div>
+
+<div class="cookie-banner">
+    <p>Esse site usa cookies para garantir que você tenha a melhor experiência em nosso site. 
+        <a href="#">Política de Privacidade</a>
+    </p>
+    <div class="cookie-buttons">
+        <button class="accept">Permitir Cookies</button>
+        <button class="reject">Rejeitar Cookies</button>
+    </div>
+</div>
+  
+  
+
+    <script src="js/script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+
+</body>
+
+
+
+</html>
+
+
+
+
